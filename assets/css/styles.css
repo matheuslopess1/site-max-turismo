@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Brush Script MT';
+    src: url('../fonts/BRUSHSCI.TTF') format('truetype')
+}
+
+@keyframes background-images-change {
+    0%   { background-image: url('../images/001.jpeg'); }
+    45%   { background-image: url('../images/001.jpeg'); }
+    50%  { background-image: url('../images/002.jpeg'); }
+    70%  { background-image: url('../images/002.jpeg'); }
+    75%  { background-image: url('../images/003.jpeg'); }
+    95%  { background-image: url('../images/003.jpeg'); }
+    100% { background-image: url('../images/004.jpeg'); }
+}
+
+body {
+    font-size: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: background-images-change;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+
+#wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#brand {
+    font-family: 'Brush Script MT';
+    font-size: 4rem;
+}
+
+#link-footer {
+    text-decoration: none;
+}
+
+#link-footer:hover {
+    text-decoration: underline;
+}
+
+.text-shadow {
+    text-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 576px) {
+    #brand {
+        font-size: 5rem;
+    }
+}
