@@ -1,11 +1,11 @@
 <?php
     require_once("./utils/session_start.php");
-    require_once("./utils/authenticated_page.php");
+    require_once("./utils/unauthenticated_page.php");
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        require_once("./utils/mysqli_connection.php");
         $email = trim($_POST["email"]);
         $senha = $_POST["senha"];
-        $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
         $stmt = $mysqli->prepare("SELECT nome, senha FROM usuarios WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
