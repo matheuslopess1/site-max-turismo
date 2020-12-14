@@ -12,11 +12,7 @@
     <body>
         <h1>ML App</h2>
         <h2>Dashboard</h2>
-        <ul>
-            <li>
-                <a href="logout.php">Sair</a>
-            </li>
-        </ul>
+        <?php include_once("./components/nav.php"); ?>
         <table>
             <thead>
                 <tr>
@@ -28,6 +24,7 @@
                 <tr>
                     <td><?=$_SESSION["usuario"]["nome"] ?></td>
                     <td><?=$_SESSION["usuario"]["email"] ?></td>
+                    <td><?=$_SESSION["usuario"]["tipo"] ?></td>
                 </tr>
             </tbody>
         </table>
