@@ -61,9 +61,8 @@
     }
 
     $result = $mysqli->query("SELECT id, nome, email, tipo FROM usuarios");
-    while ($usuario = $result->fetch_object()) {
-        $usuarios[] = $usuario;
-    }
+    $usuarios = [];
+    while ($usuario = $result->fetch_object()) $usuarios[] = $usuario;
 ?>
 <!DOCTYPE html>
 <html>
@@ -109,16 +108,21 @@
         <table>
             <thead>
                 <tr>
+                    <td>ID</td>
                     <td>Nome</td>
                     <td>Email</td>
+                    <td>Tipo</td>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><?=$_SESSION["usuario"]["nome"] ?></td>
-                    <td><?=$_SESSION["usuario"]["email"] ?></td>
-                    <td><?=$_SESSION["usuario"]["tipo"] ?></td>
-                </tr>
+                <?php foreach ($usuarios as $usuario) { ?>
+                    <tr>
+                        <td><?= $usuario["id"] ?></td>
+                        <td><?= $usuario["nome"] ?></td>
+                        <td><?= $usuario["email"] ?></td>
+                        <td><?= $usuario["tipo"] ?></td>
+                    </tr>
+                <?php } ?>
             </tbody>
         </table>
         <script>
