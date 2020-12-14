@@ -51,7 +51,7 @@
                     $erro = "Já existe um usuário com este e-mail";
                 } else {
                     $stmt = $mysqli->prepare("INSERT INTO usuarios (nome, email, senha, tipo) VALUES (?, ?, ?, ?)");
-                    $stmt->bind_param("ssss", $nome, $email, $senha, $tipo);
+                    $stmt->bind_param("ssss", $nome, $email, password_hash($senha, PASSWORD_DEFAULT), $tipo);
                     $stmt->execute();
                 }
             }
