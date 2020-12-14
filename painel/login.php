@@ -1,4 +1,5 @@
 <?php
+    require_once("./utils/display_errors.php");
     require_once("./utils/session_start.php");
     require_once("./utils/unauthenticated_page.php");
 
