@@ -19,7 +19,7 @@
     <body>
         <h1>ML App</h2>
         <h2>Usuários</h2>
-        <?php include_once("./components/nav.php"); ?>
+        <?php include("./components/nav.php"); ?>
         <table>
             <thead>
                 <tr>
