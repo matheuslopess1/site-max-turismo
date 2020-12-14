@@ -7,11 +7,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>ML App - Dashboard</title>
     </head>
     <body>
         <h1>ML App</h2>
         <h2>Dashboard</h2>
+        <ul>
+            <li>
+                <a href="logout.php">Sair</a>
+            </li>
+        </ul>
         <table>
             <thead>
                 <tr>
