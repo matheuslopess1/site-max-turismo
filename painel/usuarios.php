@@ -61,8 +61,7 @@
     }
 
     $result = $mysqli->query("SELECT id, nome, email, tipo FROM usuarios");
-    $usuarios = [];
-    while ($usuario = $result->fetch_object()) $usuarios[] = $usuario;
+    $usuarios = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
