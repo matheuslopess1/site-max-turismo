@@ -47,12 +47,11 @@
                 $stmt->bind_result($count);
                 $stmt->fetch();
                 $stmt->close();
-                var_dump($count);
-                if ($count != 0) {
+                if ($count !== 0) {
                     $erro = "Já existe um usuário com este e-mail";
                 } else {
                     $stmt = $mysqli->prepare("INSERT INTO usuarios (nome, email, senha, tipo) VALUES (?, ?, ?, ?)");
-                    $stmt->bind_param("sss", $nome, $email, $senha, $tipo);
+                    $stmt->bind_param("ssss", $nome, $email, $senha, $tipo);
                     $stmt->execute();
                 }
             }
