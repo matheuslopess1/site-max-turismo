@@ -89,11 +89,11 @@
             </p>
             <p>
                 <label for="senha" style="display: block;">Senha<span style="color: red;">*</span></label>
-                <input type="text" id="senha" name="senha" minlength="6" maxlength="18" required />
+                <input type="password" id="senha" name="senha" minlength="6" maxlength="18" required />
             </p>
             <p>
                 <label for="senha_confirmacao" style="display: block;">Confirmação da Senha<span style="color: red;">*</span></label>
-                <input type="text" id="senha_confirmacao" name="senha_confirmacao" minlength="6" maxlength="18" required />
+                <input type="password" id="senha_confirmacao" name="senha_confirmacao" minlength="6" maxlength="18" required />
             </p>
             <p>
                 <label for="tipo_admin">ADMIN</label>
@@ -101,7 +101,9 @@
                 <label for="tipo_normal">NORMAL</label>
                 <input type="radio" id="tipo_normal" name="tipo" value="NORMAL" required />
             </p>
-            <button type="submit">Cadastrar</button>
+            <p>
+                <button type="submit">Cadastrar</button>
+            </p>
         </form>
         <table>
             <thead>
