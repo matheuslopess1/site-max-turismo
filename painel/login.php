@@ -6,20 +6,18 @@
         require_once("./utils/mysqli_connection.php");
         $email = trim($_POST["email"]);
         $senha = $_POST["senha"];
-        $stmt = $mysqli->prepare("SELECT nome, senha FROM usuarios WHERE email = ?");
+        $stmt = $mysqli->prepare("SELECT nome, senha, tipo FROM usuarios WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
-        $stmt->bind_result($nome, $senha_hasheada);
+        $stmt->bind_result($nome, $senha_hasheada, $tipo);
         if ($stmt->fetch()) {
             if (password_verify($senha, $senha_hasheada)) {
                 $_SESSION["autenticado"] = true;
-                $_SESSION["usuario"] = ["nome" => $nome, "email" => $email];
+                $_SESSION["usuario"] = ["nome" => $nome, "email" => $email, "tipo" => $tipo];
                 header("Location: index.php");
                 exit();
             }
         }
-        $stmt->close();
-        $mysqli->close();
     }
 ?>
 <!DOCTYPE html>
