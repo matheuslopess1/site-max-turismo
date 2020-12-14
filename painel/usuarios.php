@@ -1,8 +1,8 @@
 <?php
-    require_once("./utils/display_errors.php");
-    require_once("./utils/session_start.php");
-    require_once("./utils/authenticated_page.php");
-    require_once("./utils/mysqli_connection.php");
+    require_once("utils/display_errors.php");
+    require_once("utils/session_start.php");
+    require_once("utils/authenticated_page.php");
+    require_once("utils/mysqli_connection.php");
 
     $result = $mysqli->query("SELECT id, nome, email, tipo FROM usuarios");
     while ($usuario = $result->fetch_object()) {
@@ -19,7 +19,7 @@
     <body>
         <h1>ML App</h2>
         <h2>Usuários</h2>
-        <?php include("./components/nav.php"); ?>
+        <?php include_once("components/nav.php"); ?>
         <table>
             <thead>
                 <tr>

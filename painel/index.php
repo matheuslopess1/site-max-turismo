@@ -1,7 +1,7 @@
 <?php
-    require_once("./utils/display_errors.php");
-    require_once("./utils/session_start.php");
-    require_once("./utils/authenticated_page.php");
+    require_once("utils/display_errors.php");
+    require_once("utils/session_start.php");
+    require_once("utils/authenticated_page.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,7 @@
     <body>
         <h1>ML App</h2>
         <h2>Dashboard</h2>
-        <?php include("./components/nav.php"); ?>
+        <?php include_once("components/nav.php"); ?>
         <table>
             <thead>
                 <tr>
