@@ -54,6 +54,7 @@
                     $senha_hasheada = password_hash($senha, PASSWORD_DEFAULT);
                     $stmt->bind_param("ssss", $nome, $email, $senha_hasheada, $tipo);
                     $stmt->execute();
+                    $stmt->close();
                 }
             }
         }
