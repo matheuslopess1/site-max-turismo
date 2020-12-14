@@ -19,6 +19,7 @@
                 exit();
             }
         }
+        $erro = "E-mail e/ou senha inválido(s)";
     }
 ?>
 <!DOCTYPE html>
@@ -32,6 +33,10 @@
         <h1>ML App</h2>
         <h2>Login</h2>
         <form method="POST">
+            <?php if (isset($erro)) { ?>
+                <p style="color: red;"><?= $erro ?></p>
+            <?php } ?>
+            <p></p>
             <p>
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required autofocus />
