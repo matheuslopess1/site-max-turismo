@@ -1,12 +1,6 @@
 <?php
-    if (!isset($_SESSION)) {
-        session_start();
-    }
-
-    if (!isset($_SESSION["autenticado"])) {
-        header("Location: login.php");
-        exit();
-    }
+    require_once("./utils/session_start.php");
+    require_once("./utils/authenticated_page.php");
 ?>
 <!DOCTYPE html>
 <html>

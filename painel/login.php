@@ -1,12 +1,6 @@
 <?php
-    if (!isset($_SESSION)) {
-        session_start();
-    }
-
-    if (isset($_SESSION["autenticado"])) {
-        header("Location: index.php");
-        exit();
-    }
+    require_once("./utils/session_start.php");
+    require_once("./utils/authenticated_page.php");
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $email = trim($_POST["email"]);
