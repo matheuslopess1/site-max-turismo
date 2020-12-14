@@ -33,12 +33,12 @@
         <h2>Login</h2>
         <form method="POST">
             <p>
-                <label>Email</label>
-                <input name="email" required />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autofocus />
             </p>
             <p>
-                <label>Senha</label>
-                <input name="senha" required />
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required />
             </p>
             <button type="submit">Entrar</button>
         </form>
