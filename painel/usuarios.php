@@ -83,8 +83,8 @@
                 <input type="text" id="nome" name="nome" maxlength="100" required />
             </p>
             <p>
-                <label style="display: block;">Email<span style="color: red;">*</span></label>
-                <input type="email" id="nome" name="email" maxlength="100" required />
+                <label for="email" style="display: block;">Email<span style="color: red;">*</span></label>
+                <input type="email" id="email" name="email" maxlength="100" required />
             </p>
             <p>
                 <label for="senha" style="display: block;">Senha<span style="color: red;">*</span></label>
