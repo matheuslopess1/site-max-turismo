@@ -1,7 +1,3 @@
-<?php
-    require_once(ROOT_DIR . "utils/session_start.php");
-    require_once(ROOT_DIR . "utils/authenticated_page.php");
-?>
 <ul>
     <li>
         <a href="index.php">Página Inicial</a>

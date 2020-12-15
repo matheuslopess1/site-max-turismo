@@ -1,5 +1,4 @@
 <?php
-    require_once("utils/constants.php");
     require_once("utils/session_start.php");
     require_once("utils/authenticated_page.php");
     require_once("utils/mysqli_connection.php");
