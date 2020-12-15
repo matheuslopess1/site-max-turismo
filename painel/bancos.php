@@ -12,7 +12,6 @@
         } else {
             $nome = trim($_POST["nome"]);
             $codigo = $_POST["codigo"];
-            var_dump($_POST["codigo"]);
             if ($nome === "") {
                 $erro = "Campo Nome não pode estar vazio";
             } else if ($codigo === "") {
@@ -47,8 +46,8 @@
         }
     }
 
-    $result = $mysqli->query("SELECT id, nome, email, tipo FROM usuarios");
-    $usuarios = $result->fetch_all(MYSQLI_ASSOC);
+    $result = $mysqli->query("SELECT id, nome, codigo FROM bancos");
+    $bancos = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
