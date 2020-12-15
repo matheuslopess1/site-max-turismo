@@ -13,7 +13,7 @@
             <a class="navbar-item" href="/painel/usuarios.php">Usuários</a>
             <a class="navbar-item" href="/painel/bancos.php">Bancos</a>
             <div class="navbar-item">
-                <a class="button is-danger is-inverted" href="/painel/logout.php">Sair</a>
+                <a class="button is-danger is-outlined" href="/painel/logout.php">Sair</a>
             </div>
         </div>
     </div>
