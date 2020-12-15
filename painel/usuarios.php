@@ -118,7 +118,7 @@
                             </div>
                         </div>
                         <div class="field">
-                            <button class="btn btn-link" type="submit">Cadastrar</button>
+                            <button class="button is-link" type="submit">Cadastrar</button>
                         </div>
                     </form>
 
