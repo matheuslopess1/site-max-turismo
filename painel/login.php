@@ -59,7 +59,9 @@
                         </div>
                         <div class="field">
                             <div class="control">
-                                <button class="button is-link" type="submit">Entrar</button>
+                                <button class="button is-link" type="submit" style="display: inline-block; width: 100%;">
+                                    Entrar
+                                </button>
                             </div>
                         </div>
                     </form>
