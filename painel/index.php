@@ -16,6 +16,7 @@
             <div class="container">
                 <h1 class="is-size-4 mb-3">Dashboard</h1>
                 <div class="box">
+                    <h2 class="is-size-5 mb-3">Dados de Sessão</h2>
                     <table class="table is-fullwidth">
                         <thead>
                             <tr>
