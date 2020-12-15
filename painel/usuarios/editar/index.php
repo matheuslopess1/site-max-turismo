@@ -83,12 +83,16 @@
             </nav>
             <div class="columns">
                 <div class="column is-3">
-                    <div class="panel">
+                    <div class="panel has-background-white">
                         <div class="panel-block">
-                            <a class="button is-link" href="/painel/usuarios/">Listar</a>
+                            <a class="button is-link" href="/painel/usuarios/" style="display: inline-block; width: 100%;">
+                                Listar
+                            </a>
                         </div>
                         <div class="panel-block">
-                            <a class="button is-link" href="/painel/usuarios/criar/">Criar</a>
+                            <a class="button is-link" href="/painel/usuarios/criar/" style="display: inline-block; width: 100%;">
+                                Criar
+                            </a>
                         </div>
                     </div>
                 </div>
