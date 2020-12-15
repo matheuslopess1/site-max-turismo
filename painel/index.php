@@ -14,7 +14,7 @@
         <div class="has-background-white-ter" style="height: 100vw;">
             <?php include_once("components/nav.php"); ?>
             <div class="container">
-                <h1>Dashboard</h1>
+                <h1 class="is-size-3">Dashboard</h1>
                 <div class="box">
                     <table class="table">
                         <thead>
