@@ -49,7 +49,7 @@
             <?php include_once("../../_componentes/menu.php") ?>
             <div class="columns">
                 <div class="column is-3">
-                    <?php include_once("../_componentes/panel.php") ?>
+                    <?php include_once("../_componentes/menu.php") ?>
                 </div>
                 <div class="column is-9">
                     <div class="container">
