@@ -67,7 +67,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($usuario as $usuarios) { ?>
+                                    <?php foreach ($usuarios as $usuario) { ?>
                                         <tr>
                                             <td><?= $usuario["id"] ?></td>
                                             <td><?= $usuario["nome"] ?></td>
