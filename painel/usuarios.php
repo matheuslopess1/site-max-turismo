@@ -79,7 +79,7 @@
                     <h2 class="is-size-5 mb-3">Adicionar Usuário</h2>
                     <form method="POST" class="mb-5">
                         <?php if (isset($erro)) { ?>
-                            <p style="color: red;"><?= $erro ?></div>
+                            <p style="color: red;"><?= $erro ?></p>
                         <?php } ?>
                         <div class="field">
                             <label class="label" for="nome" style="display: block;">Nome<span style="color: red;">*</span></label>
