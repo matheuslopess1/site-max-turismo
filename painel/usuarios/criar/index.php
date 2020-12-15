@@ -69,23 +69,23 @@
                     </div>
                 </div>
             </nav>
-            <div class="columns">
-                <div class="column is-3">
-                    <div class="panel has-background-white">
-                        <div class="panel-block">
-                            <a class="button is-link" href="/painel/usuarios/" style="display: inline-block; width: 100%;">
-                                Listar
-                            </a>
-                        </div>
-                        <div class="panel-block">
-                            <a class="button is-link" href="/painel/usuarios/criar/" style="display: inline-block; width: 100%;">
-                                Criar
-                            </a>
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-3">
+                        <div class="panel has-background-white">
+                            <div class="panel-block">
+                                <a class="button" href="/painel/usuarios/" style="display: inline-block; width: 100%;">
+                                    Listar
+                                </a>
+                            </div>
+                            <div class="panel-block">
+                                <a class="button" href="/painel/usuarios/criar/" style="display: inline-block; width: 100%;">
+                                    Criar
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="column is-9">
-                    <div class="container">
+                    <div class="column is-9">
                         <h1 class="is-size-4 mb-3">Usuários</h1>
                         <div class="box">
                             <h2 class="is-size-5 mb-3">Criação</h2>
