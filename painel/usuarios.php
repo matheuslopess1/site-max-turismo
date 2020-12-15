@@ -70,59 +70,81 @@
         <title>ML App - Usuários</title>
     </head>
     <body>
-        <h1>ML App</h2>
-        <h2>Usuários</h2>
-        <?php include_once("components/nav.php"); ?>
-        <form method="POST">
-            <?php if (isset($erro)) { ?>
-                <p style="color: red;"><?= $erro ?></p>
-            <?php } ?>
-            <p>
-                <label for="nome" style="display: block;">Nome<span style="color: red;">*</span></label>
-                <input type="text" id="nome" name="nome" maxlength="100" required />
-            </p>
-            <p>
-                <label for="email" style="display: block;">Email<span style="color: red;">*</span></label>
-                <input type="email" id="email" name="email" maxlength="100" required />
-            </p>
-            <p>
-                <label for="senha" style="display: block;">Senha<span style="color: red;">*</span></label>
-                <input type="password" id="senha" name="senha" minlength="6" maxlength="18" required />
-            </p>
-            <p>
-                <label for="senha_confirmacao" style="display: block;">Confirmação da Senha<span style="color: red;">*</span></label>
-                <input type="password" id="senha_confirmacao" name="senha_confirmacao" minlength="6" maxlength="18" required />
-            </p>
-            <p>
-                <label for="tipo_admin">ADMIN</label>
-                <input type="radio" id="tipo_admin" name="tipo" value="ADMIN" required />
-                <label for="tipo_normal">NORMAL</label>
-                <input type="radio" id="tipo_normal" name="tipo" value="NORMAL" required />
-            </p>
-            <p>
-                <button type="submit">Cadastrar</button>
-            </p>
-        </form>
-        <table>
-            <thead>
-                <tr>
-                    <td>ID</td>
-                    <td>Nome</td>
-                    <td>Email</td>
-                    <td>Tipo</td>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($usuarios as $usuario) { ?>
-                    <tr>
-                        <td><?= $usuario["id"] ?></td>
-                        <td><?= $usuario["nome"] ?></td>
-                        <td><?= $usuario["email"] ?></td>
-                        <td><?= $usuario["tipo"] ?></td>
-                    </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+        <div class="has-background-white-ter" style="height: 100vw;">
+            <?php include_once("components/nav.php"); ?>
+            <div class="container">
+                <h1 class="is-size-4 mb-3">Usuários</h1>
+                <div class="box">
+                    <h2 class="is-size-5 mb-3">Adicionar Usuário</h2>
+                    <form method="POST">
+                        <?php if (isset($erro)) { ?>
+                            <p style="color: red;"><?= $erro ?></div>
+                        <?php } ?>
+                        <div class="field">
+                            <label class="label" for="nome" style="display: block;">Nome<span style="color: red;">*</span></label>
+                            <div class="control">
+                                <input class="input" type="text" id="nome" name="nome" maxlength="100" required />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" for="email" style="display: block;">Email<span style="color: red;">*</span></label>
+                            <div class="control">
+                                <input class="input" type="email" id="email" name="email" maxlength="100" required />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" for="senha" style="display: block;">Senha<span style="color: red;">*</span></label>
+                            <div class="control">
+                                <input class="input" type="password" id="senha" name="senha" minlength="6" maxlength="18" required />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" for="senha_confirmacao" style="display: block;">Confirmação da Senha<span style="color: red;">*</span></label>
+                            <div class="control">
+                                <input class="input" type="password" id="senha_confirmacao" name="senha_confirmacao" minlength="6" maxlength="18" required />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio" for="tipo_admin">
+                                    <input type="radio" id="tipo_admin" name="tipo" value="ADMIN" required />
+                                    ADMIN
+                                </label>
+                                <label class="radio" for="tipo_normal">
+                                    <input type="radio" id="tipo_normal" name="tipo" value="NORMAL" required />
+                                    NORMAL
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <button type="submit">Cadastrar</button>
+                        </div>
+                    </form>
+
+                    <h2 class="is-size-5 mb-3">Listagem de Usuários</h2>
+                    <table class="table is-fullwidth">
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>Nome</td>
+                                <td>Email</td>
+                                <td>Tipo</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($usuarios as $usuario) { ?>
+                                <tr>
+                                    <td><?= $usuario["id"] ?></td>
+                                    <td><?= $usuario["nome"] ?></td>
+                                    <td><?= $usuario["email"] ?></td>
+                                    <td><?= $usuario["tipo"] ?></td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
         <script>
             document.getElementById("senha_confirmacao").addEventListener("input", function (event) {
                 const senha = document.getElementById("senha").value;
