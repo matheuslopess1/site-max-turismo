@@ -30,12 +30,11 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
     </head>
     <body>
-        <div class="columns">
+        <div class="columns is-flex is-align-items-center" style="height: 100vh;">
             <div class="column"></div>
             <div class="column">
                 <div class="box">
                     <h1 class="title is-4">ML App</h2>
-                    <h2 class="subtitle is-6">Login</h2>
                     <form method="POST">
                         <?php if (isset($erro)) { ?>
                             <p style="color: red;"><?= $erro ?></p>
