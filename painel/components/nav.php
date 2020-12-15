@@ -1,6 +1,6 @@
-<nav class="navbar">
+<nav class="navbar is-dark">
     <div class="navbar-brand">
-        <a class="navbar-item" href="/painel/">ML App</a>
+        <a class="navbar-item is-size-4" href="/painel/">ML App</a>
         <a class="navbar-burger">
             <span></span>
             <span></span>
