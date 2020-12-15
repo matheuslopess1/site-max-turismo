@@ -1,6 +1,6 @@
 <ul>
     <li>
-        <a href="index.php">Página Inicial</a>
+        <a href="/painel/">Página Inicial</a>
     </li>
     <?php if ($_SESSION["usuario"]["tipo"] === "ADMIN") { ?>
         <li>
