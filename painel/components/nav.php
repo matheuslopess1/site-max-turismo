@@ -1,16 +1,20 @@
-<ul>
-    <li>
-        <a href="/painel/">Página Inicial</a>
-    </li>
-    <?php if ($_SESSION["usuario"]["tipo"] === "ADMIN") { ?>
-        <li>
-            <a href="usuarios.php">Usuários</a>
-        </li>
-        <li>
-            <a href="bancos.php">Bancos</a>
-        </li>
-    <?php } ?>
-    <li>
-        <a href="logout.php">Sair</a>
-    </li>
-</ul>
+<nav class="navbar">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/painel/">ML App</a>
+        <a class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-end">
+            <a class="navbar-item" href="/painel/">Página Inicial</a>
+            <a class="navbar-item" href="/painel/usuarios.php">Usuários</a>
+            <a class="navbar-item" href="/painel/bancos.php">Bancos</a>
+            <div class="navbar-item">
+                <a class="button is-danger is-inverted" href="/painel/logout.php">Sair</a>
+            </div>
+        </div>
+    </div>
+</nav>
