@@ -27,24 +27,47 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ML App - Login</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
     </head>
     <body>
-        <h1>ML App</h2>
-        <h2>Login</h2>
-        <form method="POST">
-            <?php if (isset($erro)) { ?>
-                <p style="color: red;"><?= $erro ?></p>
-            <?php } ?>
-            <p></p>
-            <p>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required autofocus />
-            </p>
-            <p>
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" required />
-            </p>
-            <button type="submit">Entrar</button>
-        </form>
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column">
+                <div class="box">
+                    <h1 class="title is-4">ML App</h2>
+                    <h2 class="subtitle is-6">Login</h2>
+                    <form method="POST">
+                        <?php if (isset($erro)) { ?>
+                            <p style="color: red;"><?= $erro ?></p>
+                        <?php } ?>
+                        <div class="field">
+                            <label for="email" class="label">Email</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="email" id="email" name="email" required autofocus />
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="senha" class="label">Senha</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="password" id="senha" name="senha" required />
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-link" type="submit">Entrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+        <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     </body>
 </html>
