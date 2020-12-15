@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
     </head>
     <body>
-        <div class="columns is-flex is-align-items-center" style="height: 100vh;">
+        <div class="columns is-flex is-align-items-center has-background-white-ter" style="height: 100vh;">
             <div class="column"></div>
             <div class="column">
                 <div class="box">
