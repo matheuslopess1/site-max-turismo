@@ -1,6 +1,9 @@
 <?php
-    require_once("utils/session_start.php");
-    require_once("utils/authenticated_page.php");
+    if (!isset($_SESSION)) session_start();
+    if (!isset($_SESSION["autenticado"])) {
+        header("Location: /painel/login/?voltar_para=/painel/bancos/editar/");
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html>
