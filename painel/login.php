@@ -1,7 +1,8 @@
 <?php
-    require_once("utils/display_errors.php");
-    require_once("utils/session_start.php");
-    require_once("utils/unauthenticated_page.php");
+    require_once("utils/constants.php");
+    require_once(ROOT_DIR . "utils/display_errors.php");
+    require_once(ROOT_DIR . "utils/session_start.php");
+    require_once(ROOT_DIR . "utils/unauthenticated_page.php");
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         require_once("utils/mysqli_connection.php");
