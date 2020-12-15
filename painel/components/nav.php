@@ -12,9 +12,7 @@
             <a class="navbar-item" href="/painel/">Página Inicial</a>
             <a class="navbar-item" href="/painel/usuarios.php">Usuários</a>
             <a class="navbar-item" href="/painel/bancos.php">Bancos</a>
-            <div class="navbar-item">
-                <a class="button is-danger is-outlined" href="/painel/logout.php">Sair</a>
-            </div>
+            <a class="navbar-item has-text-danger" href="/painel/logout.php">Sair</a>
         </div>
     </div>
 </nav>
