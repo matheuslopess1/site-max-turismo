@@ -68,6 +68,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ML App - Usuários</title>
+        <?php include_once("utils/bulma_link.php"); ?>
     </head>
     <body>
         <div class="has-background-white-ter" style="height: 100vw;">
