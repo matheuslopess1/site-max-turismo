@@ -34,7 +34,7 @@
             <div class="column"></div>
             <div class="column">
                 <div class="box">
-                    <h1 class="title is-4">ML App</h2>
+                    <h1 class="title is-4 has-text-centered">ML App</h2>
                     <form method="POST">
                         <?php if (isset($erro)) { ?>
                             <p style="color: red;"><?= $erro ?></p>
