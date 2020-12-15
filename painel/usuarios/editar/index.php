@@ -54,6 +54,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ML App - Bancos</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
     </head>
     <body>
         <div class="has-background-white-ter" style="height: 100vw;">
