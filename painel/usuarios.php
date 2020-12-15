@@ -1,8 +1,8 @@
 <?php
-    require_once(ROOT_DIR . "utils/display_errors.php");
-    require_once(ROOT_DIR . "utils/session_start.php");
-    require_once(ROOT_DIR . "utils/authenticated_page.php");
-    require_once(ROOT_DIR . "utils/mysqli_connection.php");
+    require_once("utils/constants.php");
+    require_once("utils/session_start.php");
+    require_once("utils/authenticated_page.php");
+    require_once("utils/mysqli_connection.php");
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (!isset($_POST["nome"])) {
