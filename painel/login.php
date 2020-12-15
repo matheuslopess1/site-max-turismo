@@ -14,7 +14,7 @@
             if (password_verify($senha, $senha_hasheada)) {
                 $_SESSION["autenticado"] = true;
                 $_SESSION["usuario"] = ["nome" => $nome, "email" => $email, "tipo" => $tipo];
-                header("Location: index.php");
+                header("Location: /painel/");
                 exit();
             }
         }
