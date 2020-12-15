@@ -41,7 +41,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ML App - Bancos</title>
+        <title>ML App - Criar Usuário</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
     </head>
     <body>
@@ -71,7 +71,7 @@
             </nav>
             <div class="columns">
                 <div class="column is-3">
-                    <div class="panel">
+                    <div class="panel has-background-white">
                         <div class="panel-block">
                             <a class="button is-link" href="/painel/usuarios/">Listar</a>
                         </div>
