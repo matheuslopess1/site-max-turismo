@@ -11,6 +11,9 @@
         <li>
             <a href="usuarios.php">Usuários</a>
         </li>
+        <li>
+            <a href="bancos.php">Bancos</a>
+        </li>
     <?php } ?>
     <li>
         <a href="logout.php">Sair</a>
