@@ -1,9 +1,9 @@
 <?php
-    require_once("utils/session_start.php");
-    require_once("utils/unauthenticated_page.php");
+    if (!isset($_SESSION)) session_start();
+    if (isset($_SESSION["autenticado"])) header("Location: /painel/") && exit();
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        require_once("utils/mysqli_connection.php");
+        $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
         $email = trim($_POST["email"]);
         $senha = $_POST["senha"];
         $stmt = $mysqli->prepare("SELECT nome, senha, tipo FROM usuarios WHERE email = ?");
@@ -14,7 +14,11 @@
             if (password_verify($senha, $senha_hasheada)) {
                 $_SESSION["autenticado"] = true;
                 $_SESSION["usuario"] = ["nome" => $nome, "email" => $email, "tipo" => $tipo];
-                header("Location: /painel/");
+                if (isset($_GET["voltar_para"])) {
+                    header("Location: " . $_GET["voltar_para"]);
+                } else {
+                    header("Location: /painel/");
+                }
                 exit();
             }
         }
@@ -27,7 +31,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ML App - Login</title>
-        <?php include_once("utils/bulma_link.php"); ?>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
     </head>
     <body>
         <div class="columns is-flex is-align-items-center has-background-white-ter" style="height: 100vh;">
