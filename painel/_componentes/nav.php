@@ -1,4 +1,4 @@
-<nav class="navbar is-dark mb-5">
+<nav class="navbar is-dark">
     <div class="navbar-brand">
         <a class="navbar-item is-size-4" href="/painel/">ML App</a>
         <a class="navbar-burger" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">

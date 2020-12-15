@@ -24,7 +24,7 @@
                     <?php include_once("_componentes/menu.php") ?>
                 </div>
                 <div class="column is-9">
-                    <div class="container">
+                    <div class="container mt-5">
                         <h1 class="is-size-4 mb-3">Usuários</h1>
                         <div class="box">
                             <h2 class="is-size-5 mb-3">Listagem</h2>

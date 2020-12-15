@@ -59,12 +59,12 @@
     <body>
         <div class="has-background-white-ter" style="height: 100vw;">
             <?php include_once("../../_componentes/nav.php") ?>
-            <div class="container">
-                <div class="columns">
-                    <div class="column is-3">
-                        <?php include_once("../_componentes/menu.php") ?>
-                    </div>
-                    <div class="column is-9">
+            <div class="columns">
+                <div class="column is-3">
+                    <?php include_once("../_componentes/menu.php") ?>
+                </div>
+                <div class="column is-9">
+                    <div class="container mt-5">
                         <h1 class="is-size-4 mb-3">Usuários</h1>
                         <div class="box">
                         <h1 class="is-size-4 mb-3">Usuários</h1>

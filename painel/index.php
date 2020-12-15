@@ -16,7 +16,7 @@
     <body>
         <div class="has-background-white-ter" style="height: 100vw;">
             <?php include_once("_componentes/nav.php"); ?>
-            <div class="container">
+            <div class="container mt-5">
                 <h1 class="is-size-4 mb-3">Dashboard</h1>
                 <div class="box">
                     <h2 class="is-size-5 mb-3">Dados de Sessão</h2>
