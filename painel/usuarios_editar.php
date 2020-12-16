@@ -105,9 +105,9 @@
                 </label>
             </p>
             <button type="submit">Editar</button>
-            <script>
-                document.getElementById("tipo_<?= strtolower($tipo) ?>").checked = true;
-            </script>
         </form>
+        <script>
+            document.getElementById("tipo_<?= strtolower($tipo) ?>").checked = true;
+        </script>
     </body>
 </html>
