@@ -1,4 +1,7 @@
 <?php
+    ini_set("display_errors", "1");
+    ini_set("display_startup_errors", "1");
+    error_reporting(E_ALL);
     if (!isset($_SESSION)) {
         session_start();
     }
@@ -49,11 +52,6 @@
         <title>Dashboard</title>
     </head>
     <body>
-        <?php if (isset($nome, $codigo)) { ?>
-            <?php var_dump($nome); ?>
-            <br />
-            <?php var_dump($codigo); ?>
-        <?php } ?>
         <h1>ML App</h1>
         <ul>
             <li><a href="/painel/index.php">Dashboard</a></li>
