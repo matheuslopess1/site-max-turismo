@@ -23,10 +23,10 @@
                 <li><a href="/painel/usuarios_listagem.php">Usuários</a></li>
             <?php } ?>
         </ul>
-        <h2>Dashboard</h2>
         <ul>
             <li><?= $_SESSION["usuario"]["nome"] ?></li>
             <li><a href="/painel/logout.php">Sair</a></li>
         </ul>
+        <h2>Dashboard</h2>
     </body>
 </html>
