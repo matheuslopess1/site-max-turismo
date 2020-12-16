@@ -63,6 +63,10 @@
                 <li><a href="/painel/usuarios_listagem.php">Usuários</a></li>
             <?php } ?>
         </ul>
+        <ul>
+            <li><?= $_SESSION["usuario"]["nome"] ?></li>
+            <li><a href="/painel/logout.php">Sair</a></li>
+        </ul>
         <h2>Bancos</h2>
         <ul>
             <li><a href="/painel/bancos_listagem.php">Listagem</a></li>
