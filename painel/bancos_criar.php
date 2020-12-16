@@ -20,7 +20,7 @@
             $stmt = $mysqli->prepare("INSERT INTO bancos (nome, codigo) VALUES (?, ?)");
             $stmt->bind_param("si", $nome, $codigo);
             $stmt->execute();
-            header("Location: bancos_lsitagem.php");
+            header("Location: bancos_listagem.php");
             exit();
         }
         $stmt->close();
