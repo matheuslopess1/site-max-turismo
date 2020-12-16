@@ -15,6 +15,7 @@
         <title>Dashboard</title>
     </head>
     <body>
+        <?php var_dump($_SESSION); ?>
         <h1>ML App</h1>
         <ul>
             <li><a href="/painel/index.php">Dashboard</a></li>
