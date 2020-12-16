@@ -22,6 +22,7 @@
                 header("Location: index.php");
                 exit();
             }
+            $resultado->free();
         }
         $stmt->close();
         $mysqli->close();
