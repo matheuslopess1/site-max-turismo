@@ -19,6 +19,7 @@
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $stmt->bind_result($nome, $codigo);
+    var_dump($nome, $codigo);
     $stmt->close();
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $inserir = true;
