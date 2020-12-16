@@ -24,7 +24,7 @@
     $stmt->close();
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $inserir = true;
-        if ($codigo !== $_POST["codigo"]) {
+        if ($codigo != $_POST["codigo"]) {
             $codigo = $_POST["codigo"];
             $stmt = $mysqli->prepare("SELECT COUNT(*) AS contagem FROM bancos WHERE codigo = ?");
             $stmt->bind_param("i", $codigo);
