@@ -62,7 +62,7 @@
             <li><a href="/painel/bancos_listagem.php">Listagem</a></li>
             <li><a href="/painel/bancos_criar.php">Criar</a></li>
         </ul>
-        <h3>Criação</h3>
+        <h3>Edição</h3>
         <form method="POST">
             <?php if (isset($erro)) { ?>
                 <p style="color: red;"><?= $erro ?></p>
