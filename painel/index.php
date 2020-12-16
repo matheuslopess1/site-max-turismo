@@ -16,7 +16,6 @@
     </head>
     <body>
         <h1>ML App</h1>
-        <h2>Dashboard</h2>
         <ul>
             <li><a href="/painel/index.php">Dashboard</a></li>
             <?php if ($_SESSION["usuario"]["tipo"] === "ADMIN") { ?>
@@ -24,6 +23,7 @@
                 <li><a href="/painel/bancos_listagem.php">Usuários</a></li>
             <?php } ?>
         </ul>
+        <h2>Dashboard</h2>
         <ul>
             <li><?= $_SESSION["usuario"]["nome"] ?></li>
             <li><a href="/painel/logout.php">Sair</a></li>
