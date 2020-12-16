@@ -1,4 +1,8 @@
 <?php
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+
     if (!isset($_SESSION)) {
         session_start();
     }
@@ -10,10 +14,10 @@
         $nome = $_POST["nome"];
         $codigo = $_POST["codigo"];
         $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
-        $stmt = $mysqli->prepare("SELECT COUNT(*) AS count FROM bancos WHERE code = ?");
+        $stmt = $mysqli->prepare("SELECT COUNT(*) AS contagem FROM bancos WHERE codigo = ?");
         $stmt->bind_param("i", $codigo);
         $stmt->execute();
-        $stmt->bind_result($count);
+        $stmt->bind_result($contagem);
         $stmt->fetch();
         if ($count === 0) {
             $stmt->close();
