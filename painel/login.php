@@ -6,6 +6,27 @@
         header("Location: index.php");
         exit();
     }
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $email = $_POST["email"];
+        $senha = $_POST["senha"];
+        $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
+        $stmt = $mysqli->prepare("SELECT id, nome, email, senha FROM usuarios WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+        if ($resultado->num_rows !== 0) {
+            $linha = $resultado->fetch_assoc();
+            if (password_verify($senha, $linha["senha"])) {
+                $_SESSION["autenticado"] = true;
+                $_SESSION["usuario"] = ["id" => $linha["id"], "nome" => $linha["nome"], "email" => $linha["email"]];
+                header("Location: index.php");
+                exit();
+            }
+        }
+        $stmt->close();
+        $mysqli->close();
+        $erro = "Email e/ou senha inválido(s)";
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,6 +39,9 @@
         <h1>ML App</h1>
         <h2>Login</h2>
         <form method="POST">
+            <?php if (isset($erro)) { ?>
+                <p style="color: red;"><?= $erro ?></p>
+            <?php } ?>
             <p>
                 <label id="email">Email</label>
                 <input type="email" id="email" name="email" required />
