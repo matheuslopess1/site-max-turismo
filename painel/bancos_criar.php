@@ -25,6 +25,7 @@
         }
         $stmt->close();
         $mysqli->close();
+        $erro = "Código já registrado";
     }
 ?>
 <!DOCTYPE html>
@@ -50,6 +51,9 @@
         </ul>
         <h3>Criação</h3>
         <form method="POST">
+            <?php if (isset($erro)) { ?>
+                <p style="color: red;"><?= $erro ?></p>
+            <?php } ?>
             <p>
                 <label id="nome">Nome</label>
                 <input type="text" id="nome" name="nome" maxlength="50" required autofocus />
