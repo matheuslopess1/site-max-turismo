@@ -6,6 +6,10 @@
         header("Location: login.php");
         exit();
     }
+    if ($_SESSION["usuario"]["tipo"] !== "ADMIN") {
+        header("Location: index.php");
+        exit();
+    }
     $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
     $resultado = $mysqli->query("SELECT id, nome, codigo FROM bancos");
     $bancos = $resultado->fetch_all(MYSQLI_ASSOC);
