@@ -38,11 +38,11 @@
             if ($_POST["senha"] !== "") {
                 $sql = "UPDATE usuarios SET nome = ?, email = ?, senha = ?, tipo = ? WHERE id = ?";
                 $stmt = $mysqli->prepare($sql);
-                $stmt->bind_param("sii", $nome, $email, $senha, $tipo, $id);
+                $stmt->bind_param("ssssi", $nome, $email, $senha, $tipo, $id);
             } else {
                 $sql = "UPDATE usuarios SET nome = ?, email = ?, tipo = ? WHERE id = ?";
                 $stmt = $mysqli->prepare($sql);
-                $stmt->bind_param("sii", $nome, $email, $tipo, $id);
+                $stmt->bind_param("sssi", $nome, $email, $tipo, $id);
             }
             $stmt->execute();
             header("Location: usuarios_listagem.php");
