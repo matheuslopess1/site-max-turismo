@@ -28,7 +28,7 @@
             $stmt = $mysqli->prepare($sql);
             $stmt->bind_param("ssss", $nome, $email, $senha_hasheada, $tipo);
             $stmt->execute();
-            header("Location: bancos_listagem.php");
+            header("Location: usuarios_listagem.php");
             exit();
         }
         $stmt->close();
@@ -56,10 +56,10 @@
             <li><?= $_SESSION["usuario"]["nome"] ?></li>
             <li><a href="/painel/logout.php">Sair</a></li>
         </ul>
-        <h2>Bancos</h2>
+        <h2>Usuários</h2>
         <ul>
-            <li><a href="/painel/bancos_listagem.php">Listagem</a></li>
-            <li><a href="/painel/bancos_criar.php">Criar</a></li>
+            <li><a href="/painel/usuarios_listagem.php">Listagem</a></li>
+            <li><a href="/painel/usuarios_criar.php">Criar</a></li>
         </ul>
         <h3>Criação</h3>
         <form method="POST">
