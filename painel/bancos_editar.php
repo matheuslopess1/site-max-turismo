@@ -13,7 +13,7 @@
         header("Location: index.php");
         exit();
     }
-    $id = $_GET["id"];
+    $id = intval($_GET["id"]);
     var_dump($id);
     $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
     $stmt = $mysqli->prepare("SELECT nome, codigo FROM bancos WHERE id = ?");
