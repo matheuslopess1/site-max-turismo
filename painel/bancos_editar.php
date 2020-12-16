@@ -49,6 +49,11 @@
         <title>Dashboard</title>
     </head>
     <body>
+        <?php if (isset($nome, $codigo)) { ?>
+            <?php var_dump($nome); ?>
+            <br />
+            <?php var_dump($codigo); ?>
+        <?php } ?>
         <h1>ML App</h1>
         <ul>
             <li><a href="/painel/index.php">Dashboard</a></li>
