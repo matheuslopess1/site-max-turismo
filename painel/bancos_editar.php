@@ -14,10 +14,12 @@
         exit();
     }
     $id = $_GET["id"];
+    var_dump($id);
     $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
     $stmt = $mysqli->prepare("SELECT nome, codigo FROM bancos WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
+    $stmt->store_result();
     $stmt->bind_result($nome, $codigo);
     var_dump($nome, $codigo);
     $stmt->close();
