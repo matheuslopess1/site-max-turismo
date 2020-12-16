@@ -13,15 +13,14 @@
         header("Location: index.php");
         exit();
     }
-    $id = intval($_GET["id"]);
-    var_dump($id);
+    $id = $_GET["id"];
     $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
     $stmt = $mysqli->prepare("SELECT nome, codigo FROM bancos WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $stmt->store_result();
     $stmt->bind_result($nome, $codigo);
-    var_dump($nome, $codigo);
+    $stmt->fetch();
     $stmt->close();
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $inserir = true;
@@ -30,6 +29,7 @@
             $stmt = $mysqli->prepare("SELECT COUNT(*) AS contagem FROM bancos WHERE codigo = ?");
             $stmt->bind_param("i", $codigo);
             $stmt->execute();
+            $stmt->store_result();
             $stmt->bind_result($contagem);
             $stmt->fetch();
             if ($contagem !== 0) {
