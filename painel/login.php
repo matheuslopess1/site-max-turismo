@@ -10,7 +10,7 @@
         $email = $_POST["email"];
         $senha = $_POST["senha"];
         $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
-        $stmt = $mysqli->prepare("SELECT id, nome, email, senha FROM usuarios WHERE email = ?");
+        $stmt = $mysqli->prepare("SELECT id, nome, email, senha, tipo FROM usuarios WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $resultado = $stmt->get_result();
@@ -18,7 +18,7 @@
             $linha = $resultado->fetch_assoc();
             if (password_verify($senha, $linha["senha"])) {
                 $_SESSION["autenticado"] = true;
-                $_SESSION["usuario"] = ["id" => $linha["id"], "nome" => $linha["nome"], "email" => $linha["email"]];
+                $_SESSION["usuario"] = ["id" => $linha["id"], "nome" => $linha["nome"], "email" => $linha["email"], "tipo" => $linha["tipo"]];
                 header("Location: index.php");
                 exit();
             }
