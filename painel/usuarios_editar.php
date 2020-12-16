@@ -82,11 +82,11 @@
                 <p style="color: red;"><?= $erro ?></p>
             <?php } ?>
             <p>
-                <label for="nome">Nome</label>
+                <label for="nome">Nome*</label>
                 <input type="text" id="nome" name="nome" maxlength="50" value="<?= $nome ?>" required autofocus />
             </p>
             <p>
-                <label for="email">Email</label>
+                <label for="email">Email*</label>
                 <input type="email" id="email" name="email" maxlength="100" value="<?= $email ?>" required />
             </p>
             <p>

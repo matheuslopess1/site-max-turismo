@@ -67,15 +67,15 @@
                 <p style="color: red;"><?= $erro ?></p>
             <?php } ?>
             <p>
-                <label id="nome">Nome</label>
+                <label id="nome">Nome*</label>
                 <input type="text" id="nome" name="nome" maxlength="50" required autofocus />
             </p>
             <p>
-                <label id="email">Email</label>
+                <label id="email">Email*</label>
                 <input type="email" id="email" name="email" maxlength="100" required />
             </p>
             <p>
-                <label id="senha">Senha</label>
+                <label id="senha">Senha*</label>
                 <input type="password" id="senha" name="senha" minlength="6" maxlength="18" required />
             </p>
             <p>
