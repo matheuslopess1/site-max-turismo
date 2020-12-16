@@ -82,7 +82,7 @@
                 <label id="codigo">Código</label>
                 <input type="number" id="codigo" name="codigo" min="1" max="999" value="<?= $codigo ?>" required />
             </p>
-            <button type="submit">Criar</button>
+            <button type="submit">Editar</button>
         </form>
     </body>
 </html>
