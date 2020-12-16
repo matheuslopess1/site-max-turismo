@@ -20,27 +20,32 @@
     $stmt->fetch();
     $stmt->close();
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        $inserir = true;
-        var_dump($_POST);
-        exit();
-        if ($_POST["senha"] === "") {
-            $codigo = $_POST["codigo"];
-            $stmt = $mysqli->prepare("SELECT COUNT(*) AS contagem FROM bancos WHERE codigo = ?");
-            $stmt->bind_param("i", $codigo);
+        if ($email !== $_POST["email"]) {
+            $email = $_POST["email"];
+            $stmt = $mysqli->prepare("SELECT COUNT(*) AS contagem FROM usuarios WHERE email = ?");
+            $stmt->bind_param("s", $email);
             $stmt->execute();
             $stmt->store_result();
             $stmt->bind_result($contagem);
             $stmt->fetch();
             if ($contagem !== 0) {
-                $inserir = false;
+                $email_invalido = true;
             }
         }
-        if ($inserir) {
+        if (!isset($email_invalido)) {
             $nome = $_POST["nome"];
-            $stmt = $mysqli->prepare("UPDATE bancos SET nome = ?, codigo = ? WHERE id = ?");
-            $stmt->bind_param("sii", $nome, $codigo, $id);
+            $tipo = $_POST["tipo"];
+            if ($_POST["senha"] !== "") {
+                $sql = "UPDATE usuarios SET nome = ?, email = ?, senha = ?, tipo = ? WHERE id = ?";
+                $stmt = $mysqli->prepare($sql);
+                $stmt->bind_param("sii", $nome, $email, $senha, $tipo, $id);
+            } else {
+                $sql = "UPDATE usuarios SET nome = ?, email = ?, tipo = ? WHERE id = ?";
+                $stmt = $mysqli->prepare($sql);
+                $stmt->bind_param("sii", $nome, $email, $tipo, $id);
+            }
             $stmt->execute();
-            header("Location: bancos_listagem.php");
+            header("Location: usuarios_listagem.php");
             exit();
         }
         $erro = "Código já registrado";
@@ -71,18 +76,18 @@
             <li><a href="/painel/usuarios_listagem.php">Listagem</a></li>
             <li><a href="/painel/usuarios_criar.php">Criar</a></li>
         </ul>
-        <h3>Criação</h3>
+        <h3>Edição</h3>
         <form method="POST">
             <?php if (isset($erro)) { ?>
                 <p style="color: red;"><?= $erro ?></p>
             <?php } ?>
             <p>
                 <label id="nome">Nome</label>
-                <input type="text" id="nome" name="nome" maxlength="50" required autofocus />
+                <input type="text" id="nome" name="nome" maxlength="50" value="<?= $nome ?>" required autofocus />
             </p>
             <p>
                 <label id="email">Email</label>
-                <input type="email" id="email" name="email" maxlength="100" required />
+                <input type="email" id="email" name="email" maxlength="100" value="<?= $email ?>" required />
             </p>
             <p>
                 <label id="senha">Senha</label>
@@ -99,7 +104,7 @@
                     <input type="radio" id="tipo_analista" name="tipo" value="ANALISTA" required /> ANALISTA
                 </label>
             </p>
-            <button type="submit">Criar</button>
+            <button type="submit">Editar</button>
             <script>
                 document.getElementById("tipo_<?= strtolower($tipo) ?>").checked = true;
             </script>
