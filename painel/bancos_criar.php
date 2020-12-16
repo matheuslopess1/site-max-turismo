@@ -1,8 +1,4 @@
 <?php
-    ini_set('display_errors', '1');
-    ini_set('display_startup_errors', '1');
-    error_reporting(E_ALL);
-
     if (!isset($_SESSION)) {
         session_start();
     }
@@ -19,7 +15,7 @@
         $stmt->execute();
         $stmt->bind_result($contagem);
         $stmt->fetch();
-        if ($count === 0) {
+        if ($contagem === 0) {
             $stmt->close();
             $stmt = $mysqli->prepare("INSERT INTO bancos (nome, codigo) VALUES (?, ?)");
             $stmt->bind_param("si", $nome, $codigo);
