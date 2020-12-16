@@ -82,25 +82,25 @@
                 <p style="color: red;"><?= $erro ?></p>
             <?php } ?>
             <p>
-                <label id="nome">Nome</label>
+                <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" maxlength="50" value="<?= $nome ?>" required autofocus />
             </p>
             <p>
-                <label id="email">Email</label>
+                <label for="email">Email</label>
                 <input type="email" id="email" name="email" maxlength="100" value="<?= $email ?>" required />
             </p>
             <p>
-                <label id="senha">Senha</label>
+                <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" minlength="6" maxlength="18" />
             </p>
             <p>
-                <label id="tipo_admin">
+                <label for="tipo_admin">
                     <input type="radio" id="tipo_admin" name="tipo" value="ADMIN" required /> ADMIN
                 </label>
-                <label id="tipo_gerente">
+                <label for="tipo_gerente">
                     <input type="radio" id="tipo_gerente" name="tipo" value="GERENTE" required /> GERENTE
                 </label>
-                <label id="tipo_analista">
+                <label for="tipo_analista">
                     <input type="radio" id="tipo_analista" name="tipo" value="ANALISTA" required /> ANALISTA
                 </label>
             </p>
