@@ -21,7 +21,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ML App - Listar Usuários</title>
+        <title>ML App - Listar Agências</title>
     </head>
     <body>
         <h1>ML App</h1>
@@ -37,7 +37,7 @@
             <li><?= $_SESSION["usuario"]["nome"] ?></li>
             <li><a href="/painel/logout.php">Sair</a></li>
         </ul>
-        <h2>Usuários</h2>
+        <h2>Agências</h2>
         <ul>
             <li><a href="/painel/agencias_listagem.php">Listagem</a></li>
             <li><a href="/painel/agencias_criar.php">Criar</a></li>
