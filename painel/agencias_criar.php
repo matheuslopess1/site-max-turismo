@@ -13,16 +13,16 @@
     $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $banco_id = $_POST["banco_id"];
-        $codigo = $_POST["codigo"];
+        $codigo = sprintf("%04d", $_POST["codigo"]);
         $stmt = $mysqli->prepare("SELECT COUNT(*) AS contagem FROM agencias WHERE banco_id = ? AND codigo = ?");
-        $stmt->bind_param("ii", $banco_id, $codigo);
+        $stmt->bind_param("is", $banco_id, $codigo);
         $stmt->execute();
         $stmt->bind_result($contagem);
         $stmt->fetch();
         if ($contagem === 0) {
             $stmt->close();
             $stmt = $mysqli->prepare("INSERT INTO agencias (banco_id, codigo) VALUES (?, ?)");
-            $stmt->bind_param("ii", $banco_id, $codigo);
+            $stmt->bind_param("is", $banco_id, $codigo);
             $stmt->execute();
             header("Location: agencias_listagem.php");
             exit();
@@ -79,5 +79,13 @@
             </p>
             <button type="submit">Criar</button>
         </form>
+        <script>
+            document.querySelector("form").addEventListener("submit", function (event) {
+                const codigo = document.getElementById("codigo");
+                codigo.setAttribute("type", "text");
+                const valor = String(codigo.value).padStart(4, "0");
+                codigo.setAttribute("value", valor);
+            })
+        </script>
     </body>
 </html>
