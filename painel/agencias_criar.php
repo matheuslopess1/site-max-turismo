@@ -87,12 +87,12 @@
 
             document.querySelector("form").addEventListener("submit", function (event) {
                 const codigo = document.getElementById("codigo");
-                console.log(2, typeof, codigo.value, codigo.value);
+                console.log(2, typeof codigo.value, codigo.value);
                 codigo.setAttribute("type", "text");
-                console.log(3, typeof, codigo.value, codigo.value);
+                console.log(3, typeof codigo.value, codigo.value);
                 // const valor = String(codigo.value).padStart(4, "0");
                 codigo.setAttribute("value", valor);
-                console.log(4, typeof, codigo.value, codigo.value);
+                console.log(4, typeof codigo.value, codigo.value);
                 event.preventDefault();
             })
         </script>
