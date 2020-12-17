@@ -76,7 +76,6 @@
             </p>
             <p>
                 <label id="codigo">Código*</label>
-                <input type="number" id="codigo" name="codigo" min="1" max="9999" required />
             </p>
             <button type="submit">Criar</button>
         </form>
