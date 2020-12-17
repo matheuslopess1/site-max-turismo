@@ -13,7 +13,7 @@
     $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $banco_id = $_POST["banco_id"];
-        $codigo = sprintf("%04d", $_POST["codigo"]);
+        $codigo = $_POST["codigo"];
         $stmt = $mysqli->prepare("SELECT COUNT(*) AS contagem FROM agencias WHERE banco_id = ? AND codigo = ?");
         $stmt->bind_param("is", $banco_id, $codigo);
         $stmt->execute();
@@ -80,11 +80,20 @@
             <button type="submit">Criar</button>
         </form>
         <script>
+            document.getElementById("codigo").addEventListener("input", function (event) {
+                console.log(1, typeof this.value, this.value);
+                this.setAttribute(String(this.value).padStart(4, "0"));
+            });
+
             document.querySelector("form").addEventListener("submit", function (event) {
                 const codigo = document.getElementById("codigo");
+                console.log(2, typeof, codigo.value, codigo.value);
                 codigo.setAttribute("type", "text");
-                const valor = String(codigo.value).padStart(4, "0");
+                console.log(3, typeof, codigo.value, codigo.value);
+                // const valor = String(codigo.value).padStart(4, "0");
                 codigo.setAttribute("value", valor);
+                console.log(4, typeof, codigo.value, codigo.value);
+                event.preventDefault();
             })
         </script>
     </body>
