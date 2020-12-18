@@ -82,9 +82,7 @@
         <script>
             document.querySelector("form").addEventListener("submit", function (event) {
                 const codigo = document.getElementById("codigo");
-                console.log(typeof codigo.value, codigo.value);
                 codigo.value = codigo.value.padStart(4, "0");
-                event.preventDefault();
             })
         </script>
     </body>
