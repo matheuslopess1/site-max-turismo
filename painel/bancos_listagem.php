@@ -11,7 +11,8 @@
         exit();
     }
     $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
-    $resultado = $mysqli->query("SELECT id, nome, codigo FROM bancos");
+    $sql = "SELECT b.id, b.nome, b.codigo, (SELECT COUNT(*) FROM agencias WHERE banco_id = b.id) agencias FROM bancos b";
+    $resultado = $mysqli->query($sql);
     $bancos = $resultado->fetch_all(MYSQLI_ASSOC);
     $resultado->free();
     $mysqli->close();
@@ -49,6 +50,7 @@
                     <th>#</th>
                     <th>Nome</th>
                     <th>Código</th>
+                    <th>Nº de Agências</th>
                     <th></th>
                 </tr>
             </thead>
@@ -58,6 +60,7 @@
                         <td><?= $banco["id"] ?></td>
                         <td><?= $banco["nome"] ?></td>
                         <td><?= $banco["codigo"] ?></td>
+                        <td><?= $banco["agencias"] ?></td>
                         <td>
                             <a href="/painel/bancos_editar.php?id=<?= $banco["id"] ?>">Editar</a>
                         </td>
