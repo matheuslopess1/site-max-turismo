@@ -81,7 +81,7 @@
         </form>
         <script>
             document.getElementById("codigo").addEventListener("input", function (event) {
-                this.target.value = this.value.padStart(4, "0");
+                this.target.value = this.target.value.padStart(4, "0");
             });
 
             document.querySelector("form").addEventListener("submit", function (event) {
