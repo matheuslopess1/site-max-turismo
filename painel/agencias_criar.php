@@ -80,14 +80,10 @@
             <button type="submit">Criar</button>
         </form>
         <script>
-            document.getElementById("codigo").addEventListener("input", function (event) {
-                this.value = this.value.padStart(4, "0");
-            });
-
             document.querySelector("form").addEventListener("submit", function (event) {
                 const codigo = document.getElementById("codigo");
+                console.log(typeof codigo.value, codigo.value);
                 codigo.value = codigo.value.padStart(4, "0");
-                console.log(codigo.value);
                 event.preventDefault();
             })
         </script>
