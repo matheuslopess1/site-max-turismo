@@ -64,7 +64,7 @@
                 <p style="color: red;"><?= $erro ?></p>
             <?php } ?>
             <p>
-                <label id="banco_id">Banco*</label>
+                <label for="banco_id">Banco*</label>
                 <select id="banco_id" name="banco_id" required>
                     <?php foreach ($bancos as $banco) {  ?>
                         <option value="<?= $banco["id"] ?>">
@@ -74,7 +74,7 @@
                 </select>
             </p>
             <p>
-                <label id="codigo">Código*</label>
+                <label for="codigo">Código*</label>
                 <input type="number" id="codigo" name="codigo" min="1" max="9999" required />
             </p>
             <button type="submit">Criar</button>

@@ -44,11 +44,11 @@
                 <p style="color: red;"><?= $erro ?></p>
             <?php } ?>
             <p>
-                <label id="email">Email</label>
+                <label for="email">Email</label>
                 <input type="email" id="email" name="email" required />
             </p>
             <p>
-                <label id="senha">Senha</label>
+                <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" required />
             </p>
             <button type="submit">Entrar</button>

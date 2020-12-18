@@ -76,11 +76,11 @@
                 <p style="color: red;"><?= $erro ?></p>
             <?php } ?>
             <p>
-                <label id="nome">Nome*</label>
+                <label for="nome">Nome*</label>
                 <input type="text" id="nome" name="nome" maxlength="50" value="<?= $nome ?>" required autofocus />
             </p>
             <p>
-                <label id="codigo">Código*</label>
+                <label for="codigo">Código*</label>
                 <input type="number" id="codigo" name="codigo" min="1" max="999" value="<?= $codigo ?>" required />
             </p>
             <button type="submit">Editar</button>
