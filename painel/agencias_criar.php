@@ -81,18 +81,13 @@
         </form>
         <script>
             document.getElementById("codigo").addEventListener("input", function (event) {
-                console.log(1, typeof this.value, this.value);
-                this.setAttribute(String(this.value).padStart(4, "0"));
+                this.target.value = this.value.padStart(4, "0");
             });
 
             document.querySelector("form").addEventListener("submit", function (event) {
                 const codigo = document.getElementById("codigo");
-                console.log(2, typeof codigo.value, codigo.value);
-                codigo.setAttribute("type", "text");
-                console.log(3, typeof codigo.value, codigo.value);
-                // const valor = String(codigo.value).padStart(4, "0");
-                codigo.setAttribute("value", valor);
-                console.log(4, typeof codigo.value, codigo.value);
+                codigo.value = codigo.value.padStart(4, "0");
+                console.log(codigo.value);
                 event.preventDefault();
             })
         </script>
