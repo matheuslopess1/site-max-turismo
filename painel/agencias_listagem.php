@@ -11,10 +11,9 @@
         exit();
     }
     $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
-    $resultado = $mysqli->query("SELECT id, banco_id, codigo FROM agencias");
+    $sql = "SELECT a.id, a.banco_id, a.codigo, b.nome FROM agencias a JOIN bancos b ON a.banco_id = b.id";
+    $resultado = $mysqli->query($sql);
     $agencias = $resultado->fetch_all(MYSQLI_ASSOC);
-    $resultado->free();
-    $mysqli->close();
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,7 +46,7 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>ID do Banco</th>
+                    <th>Banco</th>
                     <th>Código</th>
                     <th></th>
                 </tr>
@@ -56,7 +55,7 @@
                 <?php foreach ($agencias as $agencia) { ?>
                     <tr>
                         <td><?= $agencia["id"] ?></td>
-                        <td><?= $agencia["banco_id"] ?></td>
+                        <td><?= $agencia["nome"] ?> (<?= $agencia["banco_id"] ?>)</td>
                         <td><?= $agencia["codigo"] ?></td>
                         <td>
                             <a href="/painel/agencias_editar.php?id=<?= $agencia["id"] ?>">
