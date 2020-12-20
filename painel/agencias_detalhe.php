@@ -4,18 +4,11 @@
     include_once("componentes/apenas_admin.php");
     include_once("componentes/db.php");
     $id = $_GET["id"];
-    $stmt = $mysqli->prepare("SELECT banco_id, codigo FROM agencias WHERE id = ?");
+    $stmt = $mysqli->prepare("SELECT a.banco_id, a.codigo, b.nome AS banco_nome FROM agencias a JOIN bancos b ON a.banco_id = b.id WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $result = $stmt->get_result();
     $agencia = $result->fetch_assoc();
-    $result->free();
-    $stmt->close();
-    $stmt = $mysqli->prepare("SELECT nome FROM bancos WHERE banco_id = ?");
-    $stmt->bind_param("i", $id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $banco = $result->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,7 +40,7 @@
                     <th style="text-align: center;">Banco</th>
                     <td>
                         <a href="/painel/bancos_detalhe.php?id=<?= $agencia["banco_id"] ?>">
-                            <?= $banco["nome"] ?> (<?= $agencia["banco_id"] ?>)
+                            <?= $agencia["banco_nome"] ?> (<?= $agencia["banco_id"] ?>)
                         </a>
                     </td>
                 </tr>
