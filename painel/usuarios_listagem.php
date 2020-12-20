@@ -32,32 +32,34 @@
                 </ul>
             </div>
             <h3>Listagem</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Tipo</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($usuarios as $usuario) { ?>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
                         <tr>
-                            <td><?= $usuario["id"] ?></td>
-                            <td><?= $usuario["nome"] ?></td>
-                            <td><?= $usuario["email"] ?></td>
-                            <td><?= $usuario["tipo"] ?></td>
-                            <td>
-                                <a href="/painel/usuarios_editar.php?id=<?= $usuario["id"] ?>">
-                                    Editar
-                                </a>
-                            </td>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Tipo</th>
+                            <th></th>
                         </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($usuarios as $usuario) { ?>
+                            <tr>
+                                <td><?= $usuario["id"] ?></td>
+                                <td><?= $usuario["nome"] ?></td>
+                                <td><?= $usuario["email"] ?></td>
+                                <td><?= $usuario["tipo"] ?></td>
+                                <td>
+                                    <a href="/painel/usuarios_editar.php?id=<?= $usuario["id"] ?>">
+                                        Editar
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </body>
 </html>
