@@ -42,8 +42,6 @@
                         <td><?= $banco["agencias"] ?></td>
                         <td>
                             <a href="/painel/bancos_detalhe.php?id=<?= $banco["id"] ?>">Detalhe</a>
-                            |
-                            <a href="/painel/bancos_editar.php?id=<?= $banco["id"] ?>">Editar</a>
                         </td>
                     </tr>
                 <?php } ?>
