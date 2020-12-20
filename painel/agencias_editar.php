@@ -1,8 +1,8 @@
 <?php
-    include_once("componentes/mostrar_erros.php");
     include_once("componentes/sessao.php");
     include_once("componentes/apenas_autenticado.php");
     include_once("componentes/apenas_admin.php");
+    include_once("componentes/db.php");
     $id = $_GET["id"];
     $stmt = $mysqli->prepare("SELECT codigo, banco_id FROM agencias WHERE id = ?");
     $stmt->bind_param("i", $id);
