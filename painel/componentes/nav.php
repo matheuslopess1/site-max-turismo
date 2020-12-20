@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-between flex-column flex-md-row">
+<div class="d-flex justify-content-between flex-column flex-md-row mb-3">
     <div class="nav">
         <a class="nav-link" href="/painel/index.php">Dashboard</a>
         <?php if ($_SESSION["usuario"]["tipo"] === "ADMIN") { ?>
