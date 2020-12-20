@@ -72,14 +72,14 @@
                 <label for="codigo">Código*</label>
                 <input type="number" id="codigo" name="codigo" min="1" max="9999" value="<?= $agencia["codigo"] ?>" required />
             </p>
-            <button type="submit">Criar</button>
+            <button type="submit">Editar</button>
         </form>
         <script>
             document.querySelector("form").addEventListener("submit", function (event) {
                 const codigo = document.getElementById("codigo");
                 codigo.value = codigo.value.padStart(4, "0");
             })
-            document.querySelector("option[value=<?= $agencia["banco_id"] ?>]").selected = true;
+            document.querySelector("option[value="<?= $agencia["banco_id"] ?>").selected = true;
         </script>
     </body>
 </html>
