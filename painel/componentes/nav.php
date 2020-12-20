@@ -1,12 +1,24 @@
-<ul>
-    <li><a href="/painel/index.php">Dashboard</a></li>
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" href="/painel/index.php">Dashboard</a>
+    </li>
     <?php if ($_SESSION["usuario"]["tipo"] === "ADMIN") { ?>
-        <li><a href="/painel/usuarios_listagem.php">Usuários</a></li>
-        <li><a href="/painel/bancos_listagem.php">Bancos</a></li>
-        <li><a href="/painel/agencias_listagem.php">Agências</a></li>
+        <li class="nav-item">
+            <a class="nav-link" href="/painel/usuarios_listagem.php">Usuários</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/painel/bancos_listagem.php">Bancos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/painel/agencias_listagem.php">Agências</a>
+        </li>
     <?php } ?>
 </ul>
-<ul>
-    <li><?= $_SESSION["usuario"]["nome"] ?></li>
-    <li><a href="/painel/logout.php">Sair</a></li>
+<ul class="nav">
+    <li class="nav-item">
+        <?= $_SESSION["usuario"]["nome"] ?>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-secondary" href="/painel/logout.php">Sair</a>
+    </li>
 </ul>
