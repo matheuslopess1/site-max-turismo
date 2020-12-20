@@ -59,6 +59,11 @@
             <li><a href="/painel/usuarios_criar.php">Criar</a></li>
         </ul>
         <h3>Edição</h3>
+        <ul>
+            <li>
+                <a href="/painel/usuarios_listagem.php">Voltar para Listagem</a>
+            </li>
+        </ul>
         <form method="POST">
             <?php if (isset($erro)) { ?>
                 <p style="color: red;"><?= $erro ?></p>
