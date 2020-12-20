@@ -1,11 +1,10 @@
 <?php
-    include_once("componentes/mostrar_erros.php");
     include_once("componentes/sessao.php");
     include_once("componentes/apenas_autenticado.php");
     include_once("componentes/apenas_admin.php");
     include_once("componentes/db.php");
     $id = $_GET["id"];
-    $stmt = $mysqli->prepare("SELECT a.banco_id, a.codigo, b.nome AS banco_nome FROM agencias a JOIN bancos b ON a.banco_id = b.id WHERE id = ?");
+    $stmt = $mysqli->prepare("SELECT a.banco_id, a.codigo, b.nome AS banco_nome FROM agencias a JOIN bancos b ON a.banco_id = b.id WHERE a.id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $result = $stmt->get_result();
