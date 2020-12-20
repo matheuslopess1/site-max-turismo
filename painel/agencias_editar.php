@@ -1,4 +1,5 @@
 <?php
+    include_once("componentes/mostrar_erros.php");
     include_once("componentes/sessao.php");
     include_once("componentes/apenas_autenticado.php");
     include_once("componentes/apenas_admin.php");
