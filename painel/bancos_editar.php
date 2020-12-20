@@ -30,7 +30,7 @@
             $stmt = $mysqli->prepare("UPDATE bancos SET nome = ?, codigo = ? WHERE id = ?");
             $stmt->bind_param("sii", $nome, $codigo, $id);
             $stmt->execute();
-            header("Location: bancos_listagem.php");
+            header("Location: bancos_editar.php?id=$id");
             exit();
         }
         $erro = "Código já registrado";
