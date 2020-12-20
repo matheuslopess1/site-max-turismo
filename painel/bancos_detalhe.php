@@ -36,15 +36,15 @@
         <table>
             <tbody>
                 <tr>
-                    <th>#</th>
+                    <th style="text-align: center;">#</th>
                     <td><?= $id ?></td>
                 </tr>
                 <tr>
-                    <th>Nome</th>
+                    <th style="text-align: center;">Nome</th>
                     <td><?= $banco["nome"] ?></td>
                 </tr>
                 <tr>
-                    <th>Código</th>
+                    <th style="text-align: center;">Código</th>
                     <td><?= $banco["codigo"] ?></td>
                 </tr>
             </tbody>
