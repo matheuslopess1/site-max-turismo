@@ -41,6 +41,7 @@
         <title>ML App - Editar Agência</title>
     </head>
     <body>
+        <?php var_dump($agencia); ?>
         <h1>ML App</h1>
         <?php include_once("componentes/nav.php"); ?>
         <h2>Bancos</h2>
