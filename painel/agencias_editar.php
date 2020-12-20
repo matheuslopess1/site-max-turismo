@@ -5,6 +5,7 @@
     include_once("componentes/db.php");
     $id = $_GET["id"];
     $stmt = $mysqli->prepare("SELECT codigo, banco_id FROM agencias WHERE id = ?");
+    $stmt->bind_param("i", $id);
     $stmt->execute();
     $result = $stmt->get_result();
     $agencia = $result->fetch_assoc();
