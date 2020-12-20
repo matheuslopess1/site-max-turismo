@@ -1,7 +1,4 @@
 <?php
-    ini_set("display_errors", "1");
-    ini_set("display_startup_errors", "1");
-    error_reporting(E_ALL);
     include_once("componentes/sessao.php");
     include_once("componentes/apenas_autenticado.php");
     include_once("componentes/apenas_admin.php");
@@ -18,7 +15,7 @@
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $result = $stmt->get_result();
-    $agencias = $resultado->fetch_all(MYSQLI_ASSOC);
+    $agencias = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
