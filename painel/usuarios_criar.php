@@ -34,44 +34,52 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ML App - Criar Usuário</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
     </head>
-    <body>
-        <h1>ML App</h1>
-        <?php include_once("componentes/nav.php"); ?>
-        <h2>Usuários</h2>
-        <ul>
-            <li><a href="/painel/usuarios_listagem.php">Listagem</a></li>
-            <li><a href="/painel/usuarios_criar.php">Criar</a></li>
-        </ul>
-        <h3>Criação</h3>
-        <form method="POST">
-            <?php if (isset($erro)) { ?>
-                <p style="color: red;"><?= $erro ?></p>
-            <?php } ?>
-            <p>
-                <label for="nome">Nome*</label>
-                <input type="text" id="nome" name="nome" maxlength="50" required autofocus />
-            </p>
-            <p>
-                <label for="email">Email*</label>
-                <input type="email" id="email" name="email" maxlength="100" required />
-            </p>
-            <p>
-                <label for="senha">Senha*</label>
-                <input type="password" id="senha" name="senha" minlength="6" maxlength="18" required />
-            </p>
-            <p>
-                <label for="tipo_admin">
-                    <input type="radio" id="tipo_admin" name="tipo" value="ADMIN" required /> ADMIN
-                </label>
-                <label for="tipo_gerente">
-                    <input type="radio" id="tipo_gerente" name="tipo" value="GERENTE" required /> GERENTE
-                </label>
-                <label for="tipo_analista">
-                    <input type="radio" id="tipo_analista" name="tipo" value="ANALISTA" required /> ANALISTA
-                </label>
-            </p>
-            <button type="submit">Criar</button>
-        </form>
+    <body class="bg-secondary">
+        <div class="container bg-white vh-100">
+            <h1 class="text-center py-5">ML App</h1>
+            <?php include_once("componentes/nav.php"); ?>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="mb-0">Usuários</h2>
+                <div class="nav">
+                    <a class="nav-link" href="/painel/usuarios_listagem.php">Listagem</a>
+                    <a class="nav-link" href="/painel/usuarios_criar.php">Criar</a>
+                </div>
+            </div>
+            <h3>Criação</h3>
+            <form method="POST">
+                <?php if (isset($erro)) { ?>
+                    <div class="text-danger mb-3"><?= $erro ?></div>
+                <?php } ?>
+                <div class="mb-3">
+                    <label class="form-label" for="nome">Nome*</label>
+                    <input class="form-control" type="text" id="nome" name="nome" maxlength="50" required autofocus />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email*</label>
+                    <input class="form-control" type="email" id="email" name="email" maxlength="100" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="senha">Senha*</label>
+                    <input class="form-control" type="password" id="senha" name="senha" minlength="6" maxlength="18" required />
+                </div>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="tipo_admin" name="tipo" value="ADMIN" required />
+                        <label class="form-check-label" for="tipo_admin">ADMIN</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="tipo_gerente" name="tipo" value="GERENTE" required />
+                        <label class="form-check-label" for="tipo_gerente">GERENTE</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="tipo_analista" name="tipo" value="ANALISTA" required />
+                        <label class="form-check-label" for="tipo_analista">ANALISTA</label>
+                    </div>
+                </div>
+                <button class="btn" type="submit">Criar</button>
+            </form>
+        </div>
     </body>
 </html>
