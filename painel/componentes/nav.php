@@ -5,6 +5,6 @@
         <a class="nav-link" href="/painel/bancos_listagem.php">Bancos</a>
         <a class="nav-link" href="/painel/agencias_listagem.php">Agências</a>
     <?php } ?>
-    <span class="nav-link ms-auto"><?= $_SESSION["usuario"]["nome"] ?></span>
+    <span class="nav-link ms-md-auto"><?= $_SESSION["usuario"]["nome"] ?></span>
     <a class="nav-link text-secondary" href="/painel/logout.php">sair</a>
 </div>
