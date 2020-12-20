@@ -12,7 +12,7 @@
     </head>
     <body class="bg-secondary">
         <div class="container bg-white vh-100">
-            <h1>ML App</h1>
+            <h1 class="text-center py-5">ML App</h1>
             <?php include_once("componentes/nav.php"); ?>
             <h2>Dashboard</h2>
         </div>
