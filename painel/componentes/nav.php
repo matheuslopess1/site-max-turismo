@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-between">
+<div class="d-flex justify-content-between mb-3">
     <ul class="nav">
         <li class="nav-item">
             <a class="nav-link" href="/painel/index.php">Dashboard</a>
