@@ -53,7 +53,7 @@
         </ul>
         <h3>Edição</h3>
         <ul>
-            <li><a href="/painel/bancos_listagem.php?id=<?= $id ?>">Detalhe</a></li>
+            <li><a href="/painel/bancos_detalhe.php?id=<?= $id ?>">Detalhe</a></li>
         </ul>
         <form method="POST">
             <?php if (isset($erro)) { ?>
