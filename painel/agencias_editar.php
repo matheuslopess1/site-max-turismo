@@ -14,6 +14,7 @@
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $banco_id = $_POST["banco_id"];
         $codigo = $_POST["codigo"];
+        var_dump($_POST);
         // if ($agencia["banco_id"] != $banco_id)
         // $stmt = $mysqli->prepare("SELECT COUNT(*) AS contagem FROM agencias WHERE banco_id = ? AND codigo = ? AND id <> ?");
         // $stmt->bind_param("is", $banco_id, $codigo);
