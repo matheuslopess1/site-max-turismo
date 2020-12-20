@@ -76,8 +76,8 @@
                             <td><?= $agencia["id"] ?></td>
                             <td><?= $agencia["codigo"] ?></td>
                             <td>
-                                <a href="/painel/agencias_editar.php?id=<?= $agencia["id"] ?>">
-                                    Editar
+                                <a href="/painel/agencias_detalhe.php?id=<?= $agencia["id"] ?>">
+                                    Detalhe
                                 </a>
                             </td>
                         </tr>
