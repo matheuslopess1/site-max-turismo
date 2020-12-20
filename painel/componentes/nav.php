@@ -19,6 +19,6 @@
         <span class="nav-link"><?= $_SESSION["usuario"]["nome"] ?></span>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-secondary" href="/painel/logout.php">Sair</a>
+        <a class="nav-link text-secondary" href="/painel/logout.php">sair</a>
     </li>
 </ul>
