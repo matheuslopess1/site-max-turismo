@@ -33,11 +33,6 @@
             <li><a href="/painel/bancos_criar.php">Criar</a></li>
         </ul>
         <h3>Detalhe</h3>
-        <ul>
-            <li>
-                <a href="/painel/bancos_listagem.php">Voltar para Listagem</a>
-            </li>
-        </ul>
         <table>
             <tbody>
                 <tr>
