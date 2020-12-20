@@ -1,17 +1,9 @@
 <?php
-    if (!isset($_SESSION)) {
-        session_start();
-    }
-    if (!isset($_SESSION["autenticado"])) {
-        header("Location: login.php");
-        exit();
-    }
-    if ($_SESSION["usuario"]["tipo"] !== "ADMIN") {
-        header("Location: index.php");
-        exit();
-    }
+    include_once("componentes/sessao.php");
+    include_once("componentes/apenas_autenticado.php");
+    include_once("componentes/apenas_admin.php");
+    include_once("componentes/db.php");
     $id = $_GET["id"];
-    $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
     $stmt = $mysqli->prepare("SELECT nome, email, tipo FROM usuarios WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();

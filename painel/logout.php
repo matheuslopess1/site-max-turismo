@@ -1,11 +1,6 @@
 <?php
-    if (!isset($_SESSION)) {
-        session_start();
-    }
-    if (!isset($_SESSION["autenticado"])) {
-        header("Location: login.php");
-        exit();
-    }
+    include_once("componentes/sessao.php");
+    include_once("componentes/apenas_autenticado.php");
     $_SESSION = [];
     header("Location: login.php");
 ?>

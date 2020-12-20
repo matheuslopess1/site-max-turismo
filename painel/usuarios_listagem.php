@@ -1,16 +1,8 @@
 <?php
-    if (!isset($_SESSION)) {
-        session_start();
-    }
-    if (!isset($_SESSION["autenticado"])) {
-        header("Location: login.php");
-        exit();
-    }
-    if ($_SESSION["usuario"]["tipo"] !== "ADMIN") {
-        header("Location: index.php");
-        exit();
-    }
-    $mysqli = new mysqli("127.0.0.1", "u351998101_matheus", "o0/?E&Ec>qQ", "u351998101_maxturismo");
+    include_once("componentes/sessao.php");
+    include_once("componentes/apenas_autenticado.php");
+    include_once("componentes/apenas_admin.php");
+    include_once("componentes/db.php");
     $resultado = $mysqli->query("SELECT id, nome, email, tipo FROM usuarios");
     $usuarios = $resultado->fetch_all(MYSQLI_ASSOC);
     $resultado->free();
