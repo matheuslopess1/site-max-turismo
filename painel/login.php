@@ -1,7 +1,6 @@
 <?php
     include_once("componentes/sessao.php");
-    include_once("componentes/apenas_autenticado.php");
-    include_once("componentes/apenas_admin.php");
+    include_once("componentes/apenas_convidado.php");
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $email = $_POST["email"];
         $senha = $_POST["senha"];
