@@ -36,11 +36,11 @@
                 <?php foreach ($agencias as $agencia) { ?>
                     <tr>
                         <td><?= $agencia["id"] ?></td>
-                        <td><?= $agencia["nome"] ?> (<?= $agencia["banco_id"] ?>)</td>
+                        <td><?= $agencia["nome"] ?></td>
                         <td><?= $agencia["codigo"] ?></td>
                         <td>
-                            <a href="/painel/agencias_editar.php?id=<?= $agencia["id"] ?>">
-                                Editar
+                            <a href="/painel/agencias_detalhe.php?id=<?= $agencia["id"] ?>">
+                                Detalhe
                             </a>
                         </td>
                     </tr>
