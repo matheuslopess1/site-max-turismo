@@ -52,6 +52,11 @@
             <li><a href="/painel/bancos_criar.php">Criar</a></li>
         </ul>
         <h3>Edição</h3>
+        <ul>
+            <li>
+                <a href="/painel/bancos_editar.php?id=<?= $id ?>">Voltar para Detalhe</a>
+            </li>
+        </ul>
         <form method="POST">
             <?php if (isset($erro)) { ?>
                 <p style="color: red;"><?= $erro ?></p>

@@ -33,6 +33,11 @@
             <li><a href="/painel/bancos_criar.php">Criar</a></li>
         </ul>
         <h3>Detalhe</h3>
+        <ul>
+            <li>
+                <a href="/painel/bancos_listagem.php">Voltar para Listagem</a>
+            </li>
+        </ul>
         <table>
             <tbody>
                 <tr>
@@ -49,6 +54,12 @@
                 </tr>
             </tbody>
         </table>
+        <h4>Ações</h4>
+        <ul>
+            <li>
+                <a href="/painel/bancos_editar.php?id=<?= $id ?>">Editar</a>
+            </li>
+        </ul>
         <h4>Agências</h4>
         <?php if ($agencias) { ?>
             <table>
