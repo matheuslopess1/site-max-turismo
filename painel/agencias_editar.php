@@ -79,7 +79,7 @@
                 const codigo = document.getElementById("codigo");
                 codigo.value = codigo.value.padStart(4, "0");
             })
-            document.querySelector("option[value="<?= $agencia["banco_id"] ?>").selected = true;
+            document.querySelector("option[value="<?= $agencia["banco_id"] ?>"]).selected = true;
         </script>
     </body>
 </html>
