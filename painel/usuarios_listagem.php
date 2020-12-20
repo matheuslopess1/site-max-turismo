@@ -20,11 +20,17 @@
         <div class="container bg-white vh-100">
             <h1 class="text-center py-5">ML App</h1>
             <?php include_once("componentes/nav.php"); ?>
-            <h2>Usuários</h2>
-            <ul>
-                <li><a href="/painel/usuarios_listagem.php">Listagem</a></li>
-                <li><a href="/painel/usuarios_criar.php">Criar</a></li>
-            </ul>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="mb-0">Usuários</h2>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/painel/usuarios_listagem.php">Listagem</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/painel/usuarios_criar.php">Criar</a>
+                    </li>
+                </ul>
+            </div>
             <h3>Listagem</h3>
             <table>
                 <thead>
