@@ -40,12 +40,12 @@
                     <td><?= $id ?></td>
                 </tr>
                 <tr>
-                    <th style="text-align: center;">Nome</th>
-                    <td><?= $banco["nome"] ?></td>
-                </tr>
-                <tr>
                     <th style="text-align: center;">Código</th>
                     <td><?= $banco["codigo"] ?></td>
+                </tr>
+                <tr>
+                    <th style="text-align: center;">Nome</th>
+                    <td><?= $banco["nome"] ?></td>
                 </tr>
             </tbody>
         </table>

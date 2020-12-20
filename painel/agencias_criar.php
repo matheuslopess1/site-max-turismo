@@ -34,7 +34,7 @@
     <body>
         <h1>ML App</h1>
         <?php include_once("componentes/nav.php"); ?>
-        <h2>Bancos</h2>
+        <h2>Agências</h2>
         <ul>
             <li><a href="/painel/agencias_listagem.php">Listagem</a></li>
             <li><a href="/painel/agencias_criar.php">Criar</a></li>

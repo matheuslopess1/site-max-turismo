@@ -27,8 +27,8 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Nome</th>
                     <th>Código</th>
+                    <th>Nome</th>
                     <th>Nº de Agências</th>
                     <th></th>
                 </tr>
@@ -37,8 +37,8 @@
                 <?php foreach ($bancos as $banco) { ?>
                     <tr>
                         <td><?= $banco["id"] ?></td>
-                        <td><?= $banco["nome"] ?></td>
                         <td><?= $banco["codigo"] ?></td>
+                        <td><?= $banco["nome"] ?></td>
                         <td><?= $banco["agencias"] ?></td>
                         <td>
                             <a href="/painel/bancos_detalhe.php?id=<?= $banco["id"] ?>">Detalhe</a>
