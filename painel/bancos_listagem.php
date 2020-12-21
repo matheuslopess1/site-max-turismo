@@ -24,8 +24,8 @@
         }
     }
     $sql = "SELECT b.id, b.nome, b.codigo, (SELECT COUNT(*) FROM agencias WHERE banco_id = b.id) agencias FROM bancos b";
-    $resultado = $mysqli->query($sql);
-    $bancos = $resultado->fetch_all(MYSQLI_ASSOC);
+    $result = $mysqli->query($sql);
+    $bancos = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
