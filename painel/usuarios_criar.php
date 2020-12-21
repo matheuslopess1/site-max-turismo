@@ -64,7 +64,7 @@
                     <label class="form-label" for="senha">Senha*</label>
                     <input class="form-control" type="password" id="senha" name="senha" minlength="6" maxlength="18" required />
                 </div>
-                <div class="col-md-6">
+                <div>
                     <label class="form-label">Tipo*</label>
                     <div>
                         <div class="form-check form-check-inline">
