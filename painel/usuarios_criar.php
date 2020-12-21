@@ -52,7 +52,7 @@
                 <?php if (isset($erro)) { ?>
                     <div class="text-danger mb-3"><?= $erro ?></div>
                 <?php } ?>
-                <div class="col-md-6">
+                <div>
                     <label class="form-label" for="nome">Nome*</label>
                     <input class="form-control" type="text" id="nome" name="nome" maxlength="50" required autofocus />
                 </div>
