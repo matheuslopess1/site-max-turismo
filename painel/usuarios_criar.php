@@ -78,7 +78,9 @@
                         <label class="form-check-label" for="tipo_analista">ANALISTA</label>
                     </div>
                 </div>
-                <button class="btn" type="submit">Criar</button>
+                <div class="d-grid d-md-block">
+                    <button class="btn btn-primary" type="submit">Criar</button>
+                </div>
             </form>
         </div>
     </body>
