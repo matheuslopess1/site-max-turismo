@@ -48,9 +48,9 @@
                 </div>
             </div>
             <h3>Criação</h3>
-            <form method="POST" class="row g-3">
+            <form class="row g-3" method="POST">
                 <?php if (isset($erro)) { ?>
-                    <div class="text-danger mb-3"><?= $erro ?></div>
+                    <div class="text-danger"><?= $erro ?></div>
                 <?php } ?>
                 <div>
                     <label class="form-label" for="nome">Nome*</label>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div>
                     <div class="d-grid d-md-block">
                         <button class="btn btn-primary" type="submit">Criar</button>
                     </div>

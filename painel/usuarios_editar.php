@@ -65,7 +65,7 @@
             <h3>Edição</h3>
             <form method="POST" class="row g-3">
                 <?php if (isset($erro)) { ?>
-                    <div class="text-danger mb-3"><?= $erro ?></div>
+                    <div class="text-danger"><?= $erro ?></div>
                 <?php } ?>
                 <div>
                     <label class="form-label" for="nome">Nome*</label>
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div>
                     <div class="d-grid d-md-block">
                         <button class="btn btn-primary" type="submit">Editar</button>
                     </div>
