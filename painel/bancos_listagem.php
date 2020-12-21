@@ -113,6 +113,16 @@
                 const modal = document.getElementById("modal-criacao");
                 modal.classList.toggle("show");
                 modal.classList.toggle("d-block");
+                const body = document.querySelector("body");
+                body.classList.toggle("modal-open");
+                let backdrop = document.querySelector("div.modal-backdrop.fade.show");
+                if (backdrop) {
+                    body.removeChild(backdrop);
+                } else {
+                    backdrop = document.createElement("div");
+                    backdrop.classList.add("modal-backdrop", "fade", "show");
+                    body.appendChild(backdrop);
+                }
             }
 
             <?php if (isset($iniciar_modal_aberto)) { ?>
