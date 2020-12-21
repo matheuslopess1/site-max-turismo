@@ -61,8 +61,10 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" onclick="toggleModalCriacao()">Close</button>
-                        <label class="btn btn-primary" for="submit-form-criacao" tabindex="0"></label>
+                        <button class="btn btn-secondary" onclick="toggleModalCriacao()">
+                            Fechar
+                        </button>
+                        <label class="btn btn-primary" for="submit-form-criacao" tabindex="0">Criar</label>
                     </div>
                 </div>
             </div>
