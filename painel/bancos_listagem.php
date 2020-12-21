@@ -112,7 +112,7 @@
             function toggleModalCriacao () {
                 const modal = document.getElementById("modal-criacao");
                 modal.classList.toggle("show");
-                modal.style.toggle("d-block");
+                modal.classList.toggle("d-block");
             }
 
             <?php if (isset($iniciar_modal_aberto)) { ?>
