@@ -65,6 +65,7 @@
                     <input class="form-control" type="password" id="senha" name="senha" minlength="6" maxlength="18" required />
                 </div>
                 <div class="col-md-6">
+                    <label class="form-label">Tipo*</label>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" id="tipo_admin" name="tipo" value="ADMIN" required />
                         <label class="form-check-label" for="tipo_admin">ADMIN</label>
