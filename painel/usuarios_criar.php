@@ -48,23 +48,23 @@
                 </div>
             </div>
             <h3>Criação</h3>
-            <form method="POST">
+            <form method="POST" class="row g-3">
                 <?php if (isset($erro)) { ?>
                     <div class="text-danger mb-3"><?= $erro ?></div>
                 <?php } ?>
-                <div class="mb-3">
+                <div class="col-md-6">
                     <label class="form-label" for="nome">Nome*</label>
                     <input class="form-control" type="text" id="nome" name="nome" maxlength="50" required autofocus />
                 </div>
-                <div class="mb-3">
+                <div class="col-md-6">
                     <label class="form-label" for="email">Email*</label>
                     <input class="form-control" type="email" id="email" name="email" maxlength="100" required />
                 </div>
-                <div class="mb-3">
+                <div class="col-md-6">
                     <label class="form-label" for="senha">Senha*</label>
                     <input class="form-control" type="password" id="senha" name="senha" minlength="6" maxlength="18" required />
                 </div>
-                <div class="mb-3">
+                <div class="col-md-6">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" id="tipo_admin" name="tipo" value="ADMIN" required />
                         <label class="form-check-label" for="tipo_admin">ADMIN</label>
@@ -78,8 +78,10 @@
                         <label class="form-check-label" for="tipo_analista">ANALISTA</label>
                     </div>
                 </div>
-                <div class="d-grid d-md-block">
-                    <button class="btn btn-primary" type="submit">Criar</button>
+                <div class="col-12">
+                    <div class="d-grid d-md-block">
+                        <button class="btn btn-primary" type="submit">Criar</button>
+                    </div>
                 </div>
             </form>
         </div>
