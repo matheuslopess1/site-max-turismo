@@ -13,8 +13,6 @@
         $result = $stmt->get_result();
         $contagem = $result->fetch_assoc()["contagem"];
         if ($contagem === 0) {
-            $result->free();
-            $stmt->close();
             $stmt = $mysqli->prepare("INSERT INTO bancos (nome, codigo) VALUES (?, ?)");
             $stmt->bind_param("si", $nome, $codigo);
             $stmt->execute();
