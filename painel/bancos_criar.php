@@ -57,7 +57,7 @@
                     <input class="form-control" type="text" id="nome" name="nome" maxlength="50" required autofocus />
                 </div>
                 <div class="col-md-2">
-                    <div class="d-grid">
+                    <div class="d-grid mt-md-4">
                         <button class="btn btn-primary" type="submit">Criar</button>
                     </div>
                 </div>
