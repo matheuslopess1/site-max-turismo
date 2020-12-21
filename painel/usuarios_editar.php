@@ -68,19 +68,19 @@
                     <div class="text-danger mb-3"><?= $erro ?></div>
                 <?php } ?>
                 <div>
-                    <label for="nome">Nome*</label>
-                    <input type="text" id="nome" name="nome" maxlength="50" value="<?= $nome ?>" required autofocus />
+                    <label class="form-label" for="nome">Nome*</label>
+                    <input class="form-control" type="text" id="nome" name="nome" maxlength="50" value="<?= $nome ?>" required autofocus />
                 </div>
                 <div class="col-md-6">
-                    <label for="email">Email*</label>
-                    <input type="email" id="email" name="email" maxlength="100" value="<?= $email ?>" required />
+                    <label class="form-label" for="email">Email*</label>
+                    <input class="form-control" type="email" id="email" name="email" maxlength="100" value="<?= $email ?>" required />
                 </div>
                 <div class="col-md-6">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" minlength="6" maxlength="18" />
+                    <label class="form-label" for="senha">Senha</label>
+                    <input class="form-control" type="password" id="senha" name="senha" minlength="6" maxlength="18" />
                 </div>
                 <div>
-                    <label class="form-label">Tipo*</label>
+                    <label class="form-label" class="form-label">Tipo*</label>
                     <div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" id="tipo_admin" name="tipo" value="ADMIN" required />
