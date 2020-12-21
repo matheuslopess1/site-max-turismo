@@ -10,9 +10,10 @@
         $stmt = $mysqli->prepare("SELECT COUNT(*) AS contagem FROM bancos WHERE codigo = ?");
         $stmt->bind_param("i", $codigo);
         $stmt->execute();
-        $stmt->bind_result($contagem);
-        $stmt->fetch();
+        $result = $stmt->get_result();
+        $contagem = $result->fetch_assoc()["contagem"];
         if ($contagem === 0) {
+            $result->free();
             $stmt->close();
             $stmt = $mysqli->prepare("INSERT INTO bancos (nome, codigo) VALUES (?, ?)");
             $stmt->bind_param("si", $nome, $codigo);
@@ -21,8 +22,6 @@
             $erro = "Código já registrado";
             $iniciar_modal_aberto = true;
         }
-        $stmt->close();
-        $mysqli->close();
     }
     $sql = "SELECT b.id, b.nome, b.codigo, (SELECT COUNT(*) FROM agencias WHERE banco_id = b.id) agencias FROM bancos b";
     $resultado = $mysqli->query($sql);
