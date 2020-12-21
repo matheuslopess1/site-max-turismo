@@ -1,4 +1,5 @@
 <?php
+    include_once("componentes/mostrar_erros.php");
     include_once("componentes/sessao.php");
     include_once("componentes/apenas_autenticado.php");
     include_once("componentes/apenas_admin.php");
@@ -6,7 +7,6 @@
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $nome = $_POST["nome"];
         $codigo = $_POST["codigo"];
-        include_once("componentes/db.php");
         $stmt = $mysqli->prepare("SELECT COUNT(*) AS contagem FROM bancos WHERE codigo = ?");
         $stmt->bind_param("i", $codigo);
         $stmt->execute();
