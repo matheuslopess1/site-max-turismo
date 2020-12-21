@@ -66,17 +66,19 @@
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Tipo*</label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="tipo_admin" name="tipo" value="ADMIN" required />
-                        <label class="form-check-label" for="tipo_admin">ADMIN</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="tipo_gerente" name="tipo" value="GERENTE" required />
-                        <label class="form-check-label" for="tipo_gerente">GERENTE</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="tipo_analista" name="tipo" value="ANALISTA" required />
-                        <label class="form-check-label" for="tipo_analista">ANALISTA</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="tipo_admin" name="tipo" value="ADMIN" required />
+                            <label class="form-check-label" for="tipo_admin">ADMIN</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="tipo_gerente" name="tipo" value="GERENTE" required />
+                            <label class="form-check-label" for="tipo_gerente">GERENTE</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="tipo_analista" name="tipo" value="ANALISTA" required />
+                            <label class="form-check-label" for="tipo_analista">ANALISTA</label>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12">
