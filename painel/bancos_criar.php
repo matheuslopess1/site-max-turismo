@@ -48,7 +48,7 @@
                 <?php if (isset($erro)) { ?>
                     <div class="text-danger"><?= $erro ?></div>
                 <?php } ?>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <label class="form-label" for="codigo">Código*</label>
                     <input class="form-control" type="number" id="codigo" name="codigo" min="1" max="999" required />
                 </div>
@@ -56,8 +56,8 @@
                     <label class="form-label" for="nome">Nome*</label>
                     <input class="form-control" type="text" id="nome" name="nome" maxlength="50" required autofocus />
                 </div>
-                <div>
-                    <div class="d-grid d-md-block">
+                <div class="col-md-2">
+                    <div class="d-grid">
                         <button class="btn btn-primary" type="submit">Criar</button>
                     </div>
                 </div>
