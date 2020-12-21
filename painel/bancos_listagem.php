@@ -37,6 +37,36 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
     </head>
     <body class="bg-secondary">
+        <div class="modal fade" id="modal-criacao" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="h5 modal-title">Criação</h3>
+                        <button class="btn-close" onclick="toggleModalCriacao()"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3" method="POST">
+                            <?php if (isset($erro)) { ?>
+                                <div class="text-danger"><?= $erro ?></div>
+                            <?php } ?>
+                            <div class="col-md-2">
+                                <label class="form-label" for="codigo">Código*</label>
+                                <input class="form-control" type="number" id="codigo" name="codigo" min="1" max="999" required />
+                            </div>
+                            <div class="col-md-8">
+                                <label class="form-label" for="nome">Nome*</label>
+                                <input class="form-control" type="text" id="nome" name="nome" maxlength="50" required autofocus />
+                            </div>
+                            <input type="submit" id="submit-form-criacao" class="d-none" />
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" onclick="toggleModalCriacao()">Close</button>
+                        <label class="btn btn-primary" for="submit-form-criacao" tabindex="0"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container bg-white min-vh-100">
             <h1 class="text-center py-5">ML App</h1>
             <?php include_once("componentes/nav.php"); ?>
@@ -76,36 +106,6 @@
                         <?php } ?>
                     </tbody>
                 </table>
-            </div>
-        </div>
-        <div class="modal fade" id="modal-criacao" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="h5 modal-title">Criação</h3>
-                        <button class="btn-close" onclick="toggleModalCriacao()"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="row g-3" method="POST">
-                            <?php if (isset($erro)) { ?>
-                                <div class="text-danger"><?= $erro ?></div>
-                            <?php } ?>
-                            <div class="col-md-2">
-                                <label class="form-label" for="codigo">Código*</label>
-                                <input class="form-control" type="number" id="codigo" name="codigo" min="1" max="999" required />
-                            </div>
-                            <div class="col-md-8">
-                                <label class="form-label" for="nome">Nome*</label>
-                                <input class="form-control" type="text" id="nome" name="nome" maxlength="50" required autofocus />
-                            </div>
-                            <input type="submit" id="submit-form-criacao" class="d-none" />
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" onclick="toggleModalCriacao()">Close</button>
-                        <label class="btn btn-primary" for="submit-form-criacao" tabindex="0"></label>
-                    </div>
-                </div>
             </div>
         </div>
         <script>
