@@ -23,7 +23,6 @@
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h2 class="mb-0">Usuários</h2>
                 <div class="nav">
-                    <a class="nav-link" href="/painel/usuarios_listagem.php">Listagem</a>
                     <a class="nav-link" href="/painel/usuarios_criar.php">Criar</a>
                 </div>
             </div>
