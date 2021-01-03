@@ -179,10 +179,7 @@
                                         <td><?= $usuario["email"] ?></td>
                                         <td><?= $usuario["tipo"] ?></td>
                                         <td>
-                                            <a
-                                                class="btn btn-primary"
-                                                href="/painel/usuarios_editar.php?id=<?= $usuario["id"] ?>"
-                                            >
+                                            <a href="/painel/usuarios_editar.php?id=<?= $usuario["id"] ?>">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                         </td>
