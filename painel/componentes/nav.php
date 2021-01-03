@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">ML App</a>
+        <a class="navbar-brand" href="/painel">ML App</a>
         <button
             class="navbar-toggler"
             onclick="document.querySelector('#navbar').classList.toggle('show')"
@@ -9,6 +9,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbar">
             <div class="navbar-nav me-auto">
+                <a class="nav-item nav-link" href="/painel/index.php">Dashboard</a>
                 <?php if ($_SESSION["usuario"]["tipo"] === "ADMIN") { ?>
                     <a class="nav-item nav-link" href="/painel/usuarios_listagem.php">Usuários</a>
                 <?php } ?>
