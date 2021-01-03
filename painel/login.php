@@ -20,10 +20,10 @@
                 $_SESSION = [
                     "autenticado" => true,
                     "usuario" => [
-                        "id" => $linha["id"],
-                        "nome" => $linha["nome"],
-                        "email" => $linha["email"],
-                        "tipo" => $linha["tipo"]
+                        "id" => $usuario["id"],
+                        "nome" => $usuario["nome"],
+                        "email" => $usuario["email"],
+                        "tipo" => $usuario["tipo"]
                     ]
                 ];
 
