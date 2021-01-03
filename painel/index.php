@@ -13,9 +13,11 @@
     <body class="bg-light">
         <?php include_once("componentes/nav.php"); ?>
         <div class="container ">
-            <h2>Dashboard</h2>
-            <div class="bg-white py-3 px-2">
-                Bem vindo. Utilize o menu acima para navegar.
+            <h2 class="mb-3">Dashboard</h2>
+            <div class="card">
+                <div class="card-body">
+                    Bem vindo. Utilize o menu acima para navegar.
+                </div>
             </div>
         </div>
     </body>
