@@ -11,7 +11,7 @@
             <div class="navbar-nav me-auto">
                 <a class="nav-item nav-link" href="/painel/index.php">Dashboard</a>
                 <?php if ($_SESSION["usuario"]["tipo"] === "ADMIN") { ?>
-                    <a class="nav-item nav-link" href="/painel/usuarios_listagem.php">Usuários</a>
+                    <a class="nav-item nav-link" href="/painel/usuarios.php">Usuários</a>
                 <?php } ?>
             </div>
             <hr class="bg-white my-2 d-lg-none" />
