@@ -1,5 +1,5 @@
 <?php
-    if (isset($_REQUEST["authenticated"]) === FALSE) {
+    if (isset($_SESSION["authenticated"]) === FALSE) {
         header("Location: /panel/");
     }
 ?>
