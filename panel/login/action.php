@@ -36,6 +36,8 @@
         exit();
     }
 
+    unset($user["password"]);
+
     $_SESSION["authenticated"] = TRUE;
     $_SESSION["user"] = $user;
 
