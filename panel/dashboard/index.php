@@ -14,8 +14,8 @@
 
     $view = file_get_contents("./page.html");
 
-    $view = str_replace($view, "[TRANSFERS_AMOUNT_TO_AUTHORIZE]", $amountToAuthorize);
-    $view = str_replace($view, "[TRANSFERS_AMOUNT_TO_MADE]", $amountToMade);
+    $view = str_replace($amountToAuthorize, "[TRANSFERS_AMOUNT_TO_AUTHORIZE]", $view);
+    $view = str_replace($amountToMade, "[TRANSFERS_AMOUNT_TO_MADE]", $view);
 
     echo $view;
 ?>
