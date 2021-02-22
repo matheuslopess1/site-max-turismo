@@ -5,12 +5,16 @@
 
     $sql = "SELECT COUNT(*) AS `amountToAuthorize` FROM `Transfer` WHERE `authorizedBy` IS NULL";
     $result = mysqli_query($stmt);
-    $amountToAuthorize = mysqli_fetch_all($result)[0]["amountToAuthorize"];
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    var_dump($rows);
+    $amountToAuthorize = $rows[0]["amountToAuthorize"];
 
 
     $sql = "SELECT COUNT(*) FROM `Transfer` WHERE `authorizedBy` IS NOT NULL AND `madeBy` IS NULL";
     $result = mysqli_query($stmt);
-    $amountToMade = mysqli_fetch_all($result, MYSQLI_ASSOC)[0]["amountToMade"];
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    var_dump($rows);
+    $amountToMade = $rows[0]["amountToMade"];
 
     $view = file_get_contents("./page.html");
 
