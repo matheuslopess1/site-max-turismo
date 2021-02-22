@@ -9,7 +9,7 @@
     $amountToAuthorize = $rows[0]["amountToAuthorize"];
 
 
-    $sql = "SELECT COUNT(*) FROM `Transfer` WHERE `authorizedBy` IS NOT NULL AND `madeBy` IS NULL";
+    $sql = "SELECT COUNT(*) AS `amountToMade` FROM `Transfer` WHERE `authorizedBy` IS NOT NULL AND `madeBy` IS NULL";
     $result = mysqli_query($link, $sql);
     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
     $amountToMade = $rows[0]["amountToMade"];
