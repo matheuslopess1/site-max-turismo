@@ -13,10 +13,9 @@
         exit();
     }
 
-    $sql = "SELECT `id`, `name`, `email` FROM `User` WHERE `email` = ? AND `password` = ?";
+    $sql = "SELECT `id`, `name`, `email`, `role` FROM `User` WHERE `email` = ? AND `password` = ?";
     $stmt = mysqli_prepare($link, $sql);
     mysqli_stmt_bind_param($stmt, "ss", $email, $password);
-    $result = mysqli_query($link);
 
     $email = $_POST["email"];
     $password = $_POST["password"];
