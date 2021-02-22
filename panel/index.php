@@ -3,5 +3,7 @@
 
     if (isset($_SESSION["authenticated"]) === FALSE) {
         header("Location: /panel/login/");
+    } else {
+        header("Location: /panel/dashboard/");
     }
 ?>
