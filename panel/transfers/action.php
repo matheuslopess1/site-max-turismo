@@ -15,6 +15,7 @@
 
         if ($_POST[$param] === "") {
             header("Location: /panel/transfers/?error=Parâmetro vazio: $param");
+            exit();
         }
     }
 
