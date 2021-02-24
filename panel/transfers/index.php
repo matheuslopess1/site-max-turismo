@@ -3,7 +3,7 @@
     include_once("../components/authenticated.php");
     include_once("../components/database.php");
 
-    $sql = "SELECT t.id, aa.name AS outgoingAccount, ab.name AS incomingAccount, CONCAT('R$ ', FORMAT(t.amount, 2, 'pt_BR')) AS amount, ua.name AS createdBy, t.createdAt, ub.name AS authorizedBy, t.authorizedAt, uc.name AS madeBy, t.madeAt FROM `Transfer` t JOIN Account aa ON t.outgoingAccount = aa.id JOIN Account ab ON t.incomingAccount = ab.id JOIN User ua ON t.createdBy = ua.id LEFT JOIN User ub ON t.authorizedBy = ub.id LEFT JOIN User uc ON t.madeBy = uc.id";
+    $sql = "SELECT t.id, aa.name AS outgoingAccount, ab.name AS incomingAccount, CONCAT('R$ ', FORMAT(t.amount, 2, 'pt_BR')) AS amount, ua.name AS createdBy, DATE_FORMAT(t.createdAt,'%d/%m/%Y') AS createdAt, ub.name AS authorizedBy, DATE_FORMAT(t.authorizedAt,'%d/%m/%Y') AS authorizedAt, uc.name AS madeBy, DATE_FORMAT(t.madeAt,'%d/%m/%Y') AS madeAt FROM `Transfer` t JOIN Account aa ON t.outgoingAccount = aa.id JOIN Account ab ON t.incomingAccount = ab.id JOIN User ua ON t.createdBy = ua.id LEFT JOIN User ub ON t.authorizedBy = ub.id LEFT JOIN User uc ON t.madeBy = uc.id";
     $result = mysqli_query($link, $sql);
     $transfers = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
