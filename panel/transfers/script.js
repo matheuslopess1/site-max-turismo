@@ -3,6 +3,8 @@ const selectOutgoingAccountEl = document.querySelector('select[name=outgoing_acc
 const selectIncomingAccountEl = document.querySelector('select[name=incoming_account]')
 const inputAmountEl = document.querySelector('input[name=amount]')
 
+const urlParams = new URLSearchParams(window.location.search);
+
 for (const transfer of transfers) {
     const trEl = document.createElement('tr')
     tbodyEl.appendChild(trEl)
@@ -13,6 +15,9 @@ for (const transfer of transfers) {
         tdEl.innerText = transfer[key]
     }
 }
+
+selectOutgoingAccountEl.selectedIndex = -1
+selectIncomingAccountEl.selectedIndex = -1
 
 for (const { id, name, type, bank, agency, account } of outgoingAccounts) {
     const option = document.createElement('option')
@@ -27,8 +32,6 @@ for (const { id, name, type, bank, agency, account } of incomingAccounts) {
     option.innerText = `${name} ${type} ${bank}/${agency}/${account}`
     selectIncomingAccountEl.appendChild(option)
 }
-
-const urlParams = new URLSearchParams(window.location.search);
 
 if (urlParams.has('error')) {
     const formEl = document.querySelector('form')
