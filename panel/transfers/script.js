@@ -27,3 +27,14 @@ for (const { id, name, type, bank, agency, account } of incomingAccounts) {
     option.innerText = `${name} ${type} ${bank}/${agency}/${account}`
     selectIncomingAccountEl.appendChild(option)
 }
+
+const urlParams = new URLSearchParams(window.location.search);
+
+if (urlParams.has('error')) {
+    const formEl = document.querySelector('form')
+    const error = urlParams.get('error')
+    const div = document.createElement('div')
+    div.classList.add('text-danger', 'text-center', 'mt-3')
+    div.innerText = error
+    formEl.appendChild(div)
+}
