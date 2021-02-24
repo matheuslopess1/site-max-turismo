@@ -42,7 +42,9 @@
     $incomingAccount = $_POST["incoming_account"];
     $amount = $_POST["amount"];
 
-    $sql = "INSERT INTO `Transfer` (outgoingAccount, incomingAccount, amount) VALUES (?, ?, ?)";
+    $userId = $_SESSION["user"]["id"];
+
+    $sql = "INSERT INTO `Transfer` (outgoingAccount, incomingAccount, amount, createdBy) VALUES (?, ?, ?, $userId)";
     $stmt = mysqli_prepare($link, $sql);
     mysqli_stmt_bind_param($stmt, "iid", $outgoingAccount, $incomingAccount, $amount);
     mysqli_stmt_execute($stmt);

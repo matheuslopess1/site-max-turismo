@@ -16,11 +16,11 @@
     $outgoingRegisters = [$registerMatheus, $registerNSA, $registerEirelli];
     $outgoingRegisters = implode($glue, array_map($addQuotes, $outgoingRegisters));
 
-    $sql = "SELECT id, `name` FROM Account WHERE register IN ($outgoingRegisters)";
+    $sql = "SELECT id, `name`, IF(`type` = 'checking', 'CC', 'CP') AS `type`, bank, agency, account FROM Account WHERE register IN ($outgoingRegisters)";
     $result = mysqli_query($link, $sql);
     $outgoingAccounts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $sql = "SELECT id, `name` FROM Account WHERE register NOT IN ($outgoingRegisters)";
+    $sql = "SELECT id, `name`, IF(`type` = 'checking', 'CC', 'CP') AS `type`, bank, agency, account FROM Account WHERE register NOT IN ($outgoingRegisters)";
     $result = mysqli_query($link, $sql);
     $incomingAccounts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
