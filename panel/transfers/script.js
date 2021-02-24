@@ -16,9 +16,6 @@ for (const transfer of transfers) {
     }
 }
 
-selectOutgoingAccountEl.selectedIndex = -1
-selectIncomingAccountEl.selectedIndex = -1
-
 for (const { id, name, type, bank, agency, account } of outgoingAccounts) {
     const option = document.createElement('option')
     option.value = id
@@ -32,6 +29,9 @@ for (const { id, name, type, bank, agency, account } of incomingAccounts) {
     option.innerText = `${name} ${type} ${bank}/${agency}/${account}`
     selectIncomingAccountEl.appendChild(option)
 }
+
+selectOutgoingAccountEl.selectedIndex = -1
+selectIncomingAccountEl.selectedIndex = -1
 
 if (urlParams.has('error')) {
     const formEl = document.querySelector('form')
