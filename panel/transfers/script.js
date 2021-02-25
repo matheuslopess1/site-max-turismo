@@ -22,7 +22,7 @@ for (const transfer of transfers) {
     if (role === 'SUPERUSER' && transfer.madeBy === null) {
         const tdEl = elements.get('madeBy')
         const button = document.createElement('button')
-        button.classList.add('btn', 'btm-sm', 'btn-success')
+        button.classList.add('btn', 'btn-sm', 'btn-success')
         button.innerText = 'Feito'
         button.addEventListener('click', (mouseEvent) => {
             const confirmed = confirm('Marcar como feito?')
