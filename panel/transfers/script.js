@@ -24,13 +24,17 @@ for (const transfer of transfers) {
         const button = document.createElement('button')
         button.classList.add('btn', 'btn-sm', 'btn-success')
         button.innerText = 'Feito'
-        button.addEventListener('click', (mouseEvent) => {
-            const confirmed = confirm('Marcar como feito?')
-            if (confirmed === false) return
+        tdEl.appendChild(button)
+        button.addEventListener('click', async (mouseEvent) => {
+            if (confirm('Marcar como feito?') === false) return
             const formData = new FormData()
             formData.append('id', transfer.id)
+            const url = '/panel/api/transfers/check-transfer-made.php'
+            const response = await fetch(url, { method: 'POST', body: formData })
+            const data = await response.json()
+            if (data.success === true) return
+            alert(data.error)
         })
-        tdEl.appendChild(button)
     }
 }
 
