@@ -12,10 +12,25 @@ for (const transfer of transfers) {
     transfer.amount = new Intl
         .NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
         .format(transfer.amount)
+    const elements = new Map()
     for (const key of keys) {
         const tdEl = document.createElement('td')
         trEl.appendChild(tdEl)
         tdEl.innerText = transfer[key]
+        elements.set(key, tdEl)
+    }
+    if (role === 'SUPERUSER' && transfer.madeBy === null) {
+        const tdEl = elements.get('madeBy')
+        const button = document.createElement('button')
+        button.classList.add('btn', 'btm-sm', 'btn-success')
+        button.innerText = 'Feito'
+        button.addEventListener('click', (mouseEvent) => {
+            const confirmed = confirm('Marcar como feito?')
+            if (confirmed === false) return
+            const formData = new FormData()
+            formData.append('id', transfer.id)
+        })
+        tdEl.appendChild(button)
     }
 }
 
