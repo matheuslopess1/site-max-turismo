@@ -37,19 +37,25 @@
                 <div class="card-body">
                     <h5 class="card-title">Nova Transferência</h5>
                     <form method="POST" action="/panel/transfers/action.php">
-                        <div class="mb-3">
-                            <label class="form-label">Conta de Saída</label>
-                            <select class="form-select" name="outgoing_account"></select>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Conta de Saída</label>
+                                <select class="form-select" name="outgoing_account"></select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Conta de Entrada</label>
+                                <select class="form-select" name="incoming_account"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Valor</label>
+                                <input class="form-control" name="amount" placeholder="100.00" />
+                            </div>
+                            <div class="col-md-1">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Conta de Entrada</label>
-                            <select class="form-select" name="incoming_account"></select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Valor</label>
-                            <input class="form-control" name="amount" placeholder="100.00" />
-                        </div>
-                        <button class="btn btn-primary" type="submit">Submeter</button>
                     </form>
                 </div>
             </div>
