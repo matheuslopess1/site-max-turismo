@@ -19,6 +19,23 @@ for (const transfer of transfers) {
         tdEl.innerText = transfer[key]
         elements.set(key, tdEl)
     }
+    if (role === 'MANAGER' && transfer.authorizedBy === null) {
+        const tdEl = elements.get('authorizedBy')
+        const button = document.createElement('button')
+        button.classList.add('btn', 'btn-sm', 'btn-success')
+        button.innerText = 'Autorizar'
+        tdEl.appendChild(button)
+        button.addEventListener('click', async (mouseEvent) => {
+            if (confirm('Marcar como autorizado?') === false) return
+            const formData = new FormData()
+            formData.append('id', transfer.id)
+            const url = '/panel/api/transfers/check-transfer-authorized.php'
+            const response = await fetch(url, { method: 'POST', body: formData })
+            const data = await response.json()
+            if (data.success === false) return alert(data.error)
+            window.location.href = window.location.href
+        })
+    }
     if (role === 'SUPERUSER' && transfer.madeBy === null) {
         const tdEl = elements.get('madeBy')
         const button = document.createElement('button')
