@@ -36,7 +36,7 @@ for (const transfer of transfers) {
             window.location.href = window.location.href
         })
     }
-    if (role === 'SUPERUSER' && transfer.madeBy === null) {
+    if (role === 'SUPERUSER' && transfer.authorizedBy !== null && transfer.madeBy === null) {
         const tdEl = elements.get('madeBy')
         const button = document.createElement('button')
         button.classList.add('btn', 'btn-sm', 'btn-success')
