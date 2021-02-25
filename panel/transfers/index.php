@@ -24,11 +24,11 @@
     $result = mysqli_query($link, $sql);
     $incomingAccounts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $view = file_get_contents('./page.html');
-    $view = str_replace('[TRANSFERS_LIST]', json_encode($transfers), $view);
-    $view = str_replace('[OUTGOING_ACCOUNTS_LIST]', json_encode($outgoingAccounts), $view);
-    $view = str_replace('[INCOMING_ACCOUNTS_LIST]', json_encode($incomingAccounts), $view);
-    $view = str_replace('[USER_ROLE]', $_SESSION["user"]["role"], $view);
+    $view = file_get_contents("./page.html");
+    $view = str_replace("[TRANSFERS_LIST]", json_encode($transfers), $view);
+    $view = str_replace("[OUTGOING_ACCOUNTS_LIST]", json_encode($outgoingAccounts), $view);
+    $view = str_replace("[INCOMING_ACCOUNTS_LIST]", json_encode($incomingAccounts), $view);
+    $view = str_replace("[USER_ROLE]", $_SESSION["user"]["role"], $view);
 
     echo $view;
 ?>
