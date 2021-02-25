@@ -19,17 +19,17 @@ for (const transfer of transfers) {
     }
 }
 
-for (const { id, name, type, bank, agency, account } of outgoingAccounts) {
+for (const { id, shortName, type, bank, agency, account } of outgoingAccounts) {
     const option = document.createElement('option')
     option.value = id
-    option.innerText = `${name} ${type} ${bank}/${agency}/${account}`
+    option.innerText = `${shortName} ${type} ${bank}/${agency}/${account}`
     selectOutgoingAccountEl.appendChild(option)
 }
 
-for (const { id, name, type, bank, agency, account } of incomingAccounts) {
+for (const { id, shortName, type, bank, agency, account } of incomingAccounts) {
     const option = document.createElement('option')
     option.value = id
-    option.innerText = `${name} ${type} ${bank}/${agency}/${account}`
+    option.innerText = `${shortName} ${type} ${bank}/${agency}/${account}`
     selectIncomingAccountEl.appendChild(option)
 }
 
