@@ -39,18 +39,27 @@
                     <form method="POST" action="/panel/transfers/action.php">
                         <div class="row g-3">
                             <div class="col-md-4">
-                                <label class="form-label">Conta de Saída</label>
+                                <label class="form-label">
+                                    Conta de Saída <i class="fas fa-arrow-up"></i>
+                                </label>
                                 <select class="form-select" name="outgoing_account"></select>
                             </div>
                             <div class="col-md-4">
-                                <label class="form-label">Conta de Entrada</label>
+                                <label class="form-label">
+                                    Conta de Entrada <i class="fas fa-arrow-down"></i>
+                                </label>
                                 <select class="form-select" name="incoming_account"></select>
                             </div>
                             <div class="col-md-3">
-                                <label class="form-label">Valor</label>
+                                <label class="form-label">
+                                    Valor <i class="fas fa-dollar-sign"></i>
+                                </label>
                                 <input class="form-control" name="amount" placeholder="100.00" />
                             </div>
                             <div class="col-md-1">
+                                <label class="form-label d-none d-md-block">
+                                    &nbsp;
+                                </label>
                                 <button class="btn btn-primary" type="submit">
                                     <i class="fas fa-plus"></i>
                                 </button>
@@ -66,7 +75,9 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>
+                                        <i class="fas fa-hashtag"></i>
+                                    </th>
                                     <th>
                                         <i class="fas fa-arrow-up"></i>
                                     </th>
