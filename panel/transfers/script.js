@@ -9,6 +9,9 @@ for (const transfer of transfers) {
     const trEl = document.createElement('tr')
     tbodyEl.appendChild(trEl)
     const keys = Object.keys(transfer)
+    transfer.amount = new Intl
+        .NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
+        .format(transfer.amount)
     for (const key of keys) {
         const tdEl = document.createElement('td')
         trEl.appendChild(tdEl)
