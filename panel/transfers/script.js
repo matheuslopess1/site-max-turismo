@@ -32,8 +32,8 @@ for (const transfer of transfers) {
             const url = '/panel/api/transfers/check-transfer-made.php'
             const response = await fetch(url, { method: 'POST', body: formData })
             const data = await response.json()
-            if (data.success === true) return
-            alert(data.error)
+            if (data.success === false) return alert(data.error)
+            window.location.href = window.location.href
         })
     }
 }
